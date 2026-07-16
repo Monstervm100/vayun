@@ -1,3 +1,14 @@
+# Vayun 🚀
+
+Projects built for **Vayun Bro** — created by **Mithil Bhansali**.
+
+| Project | What it is |
+|---|---|
+| ♞ **ChessMaster Academy** (this repo's root — `frontend/` + `backend/`) | AI-powered personal chess coach: lessons, adaptive tactics, play vs Stockfish, game analysis, parent dashboard. Deploy on Vercel with **Root Directory = `frontend`**. |
+| 🧠 [ReasoningLab](reasoninglab/) | Adaptive math-reasoning trainer for Grade 5–6 Math Kangaroo prep. Deploy on Vercel with **Root Directory = `reasoninglab/client`**. |
+
+---
+
 # ♞ ChessMaster Academy
 
 An AI-powered personal chess coach for children, beginners and intermediate players —
