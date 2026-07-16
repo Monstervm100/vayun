@@ -169,6 +169,10 @@ export default function AppShell({ children }: { children: ReactNode }) {
 
         <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-6 pb-24 md:pb-8">{children}</main>
 
+        <footer className="no-print mx-auto w-full max-w-6xl px-4 pb-24 pt-2 text-center text-xs text-black/40 dark:text-white/40 md:pb-6">
+          ♟️ Created by <span className="font-bold">Mithil Bhansali</span> · For — <span className="font-bold">Vayun Bro</span> ❤️
+        </footer>
+
         {/* Mobile bottom nav */}
         <nav className="no-print fixed inset-x-0 bottom-0 z-40 flex justify-around border-t border-black/8 bg-white/95 py-1.5 backdrop-blur dark:border-white/10 dark:bg-[#12131c]/95 md:hidden">
           {MOBILE_NAV.map((n) => (

@@ -82,3 +82,7 @@ react-chessboard · Stockfish (WASM, in-browser Web Worker) · FastAPI · SQLAlc
 PostgreSQL · Redis · JWT · Docker
 
 See [docs/](docs/) for the full PRD, architecture, deployment guide and roadmap.
+
+---
+
+♟️ **Created by Mithil Bhansali · For — Vayun Bro** ❤️
