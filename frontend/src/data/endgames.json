@@ -1,0 +1,86 @@
+[
+  {
+    "id": "kq-mate",
+    "name": "King & Queen vs King",
+    "emoji": "👑",
+    "difficulty": 1,
+    "fen": "4k3/8/8/8/8/8/8/Q3K3 w - - 0 1",
+    "playerColor": "white",
+    "goal": "win",
+    "maxMoves": 30,
+    "description": "The first checkmate every player must master. Use the queen to shrink the enemy king's box, bring your own king up, and deliver mate at the edge.",
+    "hints": ["Make a 'knight-move' shape between your queen and their king to shrink the box", "Never let the queen get close enough for stalemate — leave the king one or two squares until your king arrives", "March your king straight toward the enemy king, then mate on the edge"]
+  },
+  {
+    "id": "kr-mate",
+    "name": "King & Rook vs King",
+    "emoji": "🏰",
+    "difficulty": 2,
+    "fen": "4k3/8/8/8/8/8/8/R3K3 w - - 0 1",
+    "playerColor": "white",
+    "goal": "win",
+    "maxMoves": 40,
+    "description": "The box method: use the rook to fence the king in, walk your king up to take the opposition, and push the fence smaller until mate on the edge.",
+    "hints": ["Use the rook to cut the king off along a rank or file — build the fence", "When the kings face each other, that is your moment: check with the rook", "If the enemy king attacks your rook, slide it to the far side of the board"]
+  },
+  {
+    "id": "kp-promotion",
+    "name": "King & Pawn: Escort to Promotion",
+    "emoji": "🚶",
+    "difficulty": 2,
+    "fen": "4k3/8/3K4/8/4P3/8/8/8 w - - 0 1",
+    "playerColor": "white",
+    "goal": "win",
+    "maxMoves": 25,
+    "description": "Your king is in front of the pawn — the winning setup. Escort the pawn home, promote it, and finish with the queen mate you already know.",
+    "hints": ["Keep your king IN FRONT of or beside the pawn, never behind it", "Take the opposition: make the enemy king step aside first", "Do not rush the pawn — king moves first, pawn follows"]
+  },
+  {
+    "id": "opposition",
+    "name": "The Opposition",
+    "emoji": "🤺",
+    "difficulty": 3,
+    "fen": "8/4k3/8/4K3/4P3/8/8/8 b - - 0 1",
+    "playerColor": "white",
+    "goal": "win",
+    "maxMoves": 25,
+    "description": "Kings face off one square apart — whoever must move loses ground. Black moves first here, so you have the opposition. Use it to force your pawn through.",
+    "hints": ["When their king steps aside, advance YOUR KING diagonally forward, not the pawn", "Only push the pawn when your king already controls the promotion path", "If your king reaches the 6th rank in front of the pawn, the win is guaranteed"]
+  },
+  {
+    "id": "lucena",
+    "name": "Lucena Position",
+    "emoji": "🌉",
+    "difficulty": 4,
+    "fen": "1K6/1P3k2/8/8/8/8/r7/2R5 w - - 0 1",
+    "playerColor": "white",
+    "goal": "win",
+    "maxMoves": 20,
+    "description": "The most important rook endgame position in chess. Your pawn is one step from queening but your king is stuck in front. Learn to 'build a bridge' with the rook.",
+    "hints": ["Start with Rc4! — the rook will become an umbrella against the checks", "Walk your king out; when the checks come, block them by putting the rook on the 4th rank bridge", "The rook shelters the king from rook checks — that is the bridge"]
+  },
+  {
+    "id": "philidor",
+    "name": "Philidor Position (Hold the Draw)",
+    "emoji": "🧱",
+    "difficulty": 4,
+    "fen": "7r/8/8/3kp3/8/R7/8/4K3 w - - 0 1",
+    "playerColor": "white",
+    "goal": "draw",
+    "maxMoves": 30,
+    "description": "Down a pawn in a rook endgame — but this is a known draw! Keep your rook on the third rank until the pawn advances, then check from behind forever.",
+    "hints": ["Keep your rook on YOUR third rank (the 3rd) so their king cannot advance", "The moment the pawn steps forward, swing your rook far away and check from behind", "Never let their king reach the squares next to your king without your rook checking"]
+  },
+  {
+    "id": "kq-vs-pawn",
+    "name": "Queen vs Pawn on the 7th",
+    "emoji": "🏁",
+    "difficulty": 5,
+    "fen": "8/8/8/8/8/2Q5/5pk1/4K3 w - - 0 1",
+    "playerColor": "white",
+    "goal": "win",
+    "maxMoves": 25,
+    "description": "Their pawn is one square from promoting! Use checks to force the enemy king in front of its own pawn, gaining a free move each time to march your king closer.",
+    "hints": ["Check until the king is forced to stand in FRONT of its own pawn", "Each time it blocks its pawn, take one step closer with your king", "When your king is close enough, capture the pawn or deliver mate"]
+  }
+]

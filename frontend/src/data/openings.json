@@ -1,0 +1,137 @@
+[
+  {
+    "id": "italian",
+    "name": "Italian Game",
+    "emoji": "🇮🇹",
+    "color": "white",
+    "history": "One of the oldest recorded openings, analyzed in Italy in the 1500s. It remains a favorite first opening for beginners and a serious weapon even at world-championship level.",
+    "ideas": ["Develop quickly and castle early", "Aim the bishop at the weak f7 square", "Build a strong pawn center with c3 and d4", "Keep your pieces working together toward the center"],
+    "mainLine": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "c3", "Nf6", "d3", "d6", "O-O", "O-O"],
+    "plans": ["Slow build-up: play d3, c3, Re1, Nbd2-f1-g3 and prepare d4 later", "Watch for tactics on f7 once your knight can jump to g5", "Expand on the queenside with b4 and a4 in the middlegame"],
+    "mistakes": ["Playing Ng5 too early and losing the knight for nothing", "Forgetting to castle and getting attacked in the center", "Trading the strong c4-bishop without a good reason"],
+    "quiz": [
+      { "q": "What weak square does the Italian bishop on c4 target?", "options": ["f7", "d5", "g7", "b7"], "answer": 0, "why": "Before castling, f7 is defended only by the king — the classic target of the Italian Game." },
+      { "q": "What is White's usual plan with the c3 pawn move?", "options": ["To stop Bb4 checks and prepare d4", "To attack the queen", "To open the c-file for the rook", "To defend the king"], "answer": 0, "why": "c3 supports the d4 push, building the ideal pawn center, and takes b4 away from Black's pieces." }
+    ]
+  },
+  {
+    "id": "london",
+    "name": "London System",
+    "emoji": "🏰",
+    "color": "white",
+    "history": "Named after the London tournament of 1922, this solid system became hugely popular in the 2010s. You can play almost the same setup against nearly anything Black does.",
+    "ideas": ["Get the dark-squared bishop OUT to f4 before playing e3", "Build the solid pawn triangle c3-d4-e3", "Develop pieces to the same reliable squares every game", "Attack the kingside once your position is safe"],
+    "mainLine": ["d4", "d5", "Bf4", "Nf6", "e3", "e6", "Nf3", "Bd6", "Bg3", "O-O", "Bd3", "c5", "c3", "Nc6"],
+    "plans": ["Standard setup: Bf4, e3, Bd3, Nbd2, c3, then castle", "Plant a knight on e5 and support it with f4 for a kingside attack", "Meet ...c5 calmly with c3, keeping your pawn wall intact"],
+    "mistakes": ["Playing e3 before Bf4 and locking your bishop inside", "Ignoring Black's queenside play completely", "Trading dark-squared bishops when it helps Black"],
+    "quiz": [
+      { "q": "Which piece must develop BEFORE you play e3 in the London?", "options": ["The c1 bishop to f4", "The b1 knight", "The queen", "The f1 bishop"], "answer": 0, "why": "If you play e3 first, your c1-bishop is locked behind its own pawns — the number one London mistake." },
+      { "q": "What pawn structure is the heart of the London System?", "options": ["The c3-d4-e3 triangle", "Doubled f-pawns", "The e4-d4 big center", "A kingside fianchetto"], "answer": 0, "why": "That solid triangle makes White's position very hard to attack." }
+    ]
+  },
+  {
+    "id": "queens-gambit",
+    "name": "Queen's Gambit",
+    "emoji": "👑",
+    "color": "white",
+    "history": "Documented as early as 1490 and the star of a world-famous TV series, the Queen's Gambit is the most respected way to fight for the center after 1.d4 d5.",
+    "ideas": ["Offer the c-pawn to pull Black's pawn away from the center", "It is not a real gambit — you can usually win the pawn back", "Take space and develop smoothly", "Pressure the queenside with your rooks"],
+    "mainLine": ["d4", "d5", "c4", "e6", "Nc3", "Nf6", "Bg5", "Be7", "e3", "O-O", "Nf3", "Nbd7"],
+    "plans": ["Against the accepted (…dxc4), play e4 or e3 and regain the pawn with Bxc4", "In the declined, pressure d5 with Bg5, e3, and Rc1", "Use the minority attack: push b4-b5 to create a weak black pawn"],
+    "mistakes": ["Chasing the c4 pawn too hard after ...dxc4 and falling behind in development", "Letting Black free the position with an easy ...c5 or ...e5", "Trading your good bishop on g5 for no reason"],
+    "quiz": [
+      { "q": "Is the Queen's Gambit a true gambit (a real pawn sacrifice)?", "options": ["No — White can almost always regain the pawn", "Yes — White gives up the pawn forever", "Only in blitz", "Only if Black castles"], "answer": 0, "why": "If Black tries to keep the c4 pawn with ...b5, tricks like a4 and Qf3 win the material back." },
+      { "q": "What is the point of 2.c4?", "options": ["Pull Black's d5 pawn away from the center", "Attack f7", "Prepare to castle queenside", "Trap Black's bishop"], "answer": 0, "why": "If Black captures, White dominates the center with e4 next." }
+    ]
+  },
+  {
+    "id": "ruy-lopez",
+    "name": "Ruy Lopez",
+    "emoji": "🇪🇸",
+    "color": "white",
+    "history": "Named after a Spanish priest who wrote about it in 1561. Called 'the Spanish torture' because White can squeeze Black slowly for the whole game. A favorite of nearly every world champion.",
+    "ideas": ["Pressure the knight that defends the central e5 pawn", "Keep the tension — don't rush to capture on c6", "Build a long-term space advantage", "The bishop retreats to b3 and stays powerful for the whole game"],
+    "mainLine": ["e4", "e5", "Nf3", "Nc6", "Bb5", "a6", "Ba4", "Nf6", "O-O", "Be7", "Re1", "b5", "Bb3", "d6", "c3", "O-O"],
+    "plans": ["The classic maneuver: Nbd2-f1-g3 heading for f5", "Build the big center with c3 and d4", "Meet Black's ...b5 and ...Na5 by keeping your light-squared bishop safe on c2"],
+    "mistakes": ["Capturing on c6 without a concrete reason", "Allowing the Noah's Ark trap: after careless play the bishop gets trapped by ...c4", "Forgetting the e4 pawn needs protection after Black plays ...b5 and ...Na5"],
+    "quiz": [
+      { "q": "What is the idea behind 3.Bb5?", "options": ["Pressure the knight defending the e5 pawn", "Threaten mate on f7", "Prepare queenside castling", "Trade bishops immediately"], "answer": 0, "why": "The bishop pressures c6 — the defender of e5 — creating long-term threats against Black's center." },
+      { "q": "After 3...a6, why doesn't White just take the knight?", "options": ["Black regains the pawn easily after Bxc6 dxc6 Nxe5 with Qd4", "It loses a rook", "It allows instant mate", "Taking is actually the best move"], "answer": 0, "why": "After 4.Bxc6 dxc6 5.Nxe5 Qd4! forks the knight and e4-pawn, so White gains nothing." }
+    ]
+  },
+  {
+    "id": "scotch",
+    "name": "Scotch Game",
+    "emoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+    "color": "white",
+    "history": "Made famous in a correspondence match between Edinburgh and London in 1824, and revived by Garry Kasparov in the 1990s as a surprise weapon.",
+    "ideas": ["Open the center immediately with d4", "Get free, active piece play", "Avoid heavy opening theory", "Fight for the initiative from move 3"],
+    "mainLine": ["e4", "e5", "Nf3", "Nc6", "d4", "exd4", "Nxd4", "Bc5", "Be3", "Qf6", "c3", "Nge7"],
+    "plans": ["Develop with Be3, c3 and Bc4 or Be2, then castle", "Use your extra central space to start a kingside initiative", "If Black plays ...Nf6, consider the aggressive e5 push"],
+    "mistakes": ["Moving the d4 knight repeatedly and losing time", "Neglecting the e4 pawn", "Letting Black trade everything into an easy endgame"],
+    "quiz": [
+      { "q": "What does White achieve with 3.d4?", "options": ["Opens the center before Black is developed", "Wins a pawn by force", "Stops Black from castling", "Traps the c6 knight"], "answer": 0, "why": "White trades off the e5 pawn immediately to free the pieces and seize space." },
+      { "q": "After 3...exd4 4.Nxd4 Bc5, what does the bishop attack?", "options": ["The knight on d4", "The f2 pawn only", "The rook on a1", "Nothing"], "answer": 0, "why": "The bishop hits d4, so White usually defends with Be3 or c3." }
+    ]
+  },
+  {
+    "id": "sicilian",
+    "name": "Sicilian Defense",
+    "emoji": "🌋",
+    "color": "black",
+    "history": "The most popular and highest-scoring reply to 1.e4 at every level of chess. Named after the Italian island, it turns the game into an unbalanced fight from the very first move.",
+    "ideas": ["Fight for the center from the side with the c-pawn", "Trade your c-pawn for White's d-pawn to get a central majority", "Use the half-open c-file for your rooks and queen", "Accept a sharp, double-edged battle"],
+    "mainLine": ["e4", "c5", "Nf3", "d6", "d4", "cxd4", "Nxd4", "Nf6", "Nc3", "a6"],
+    "plans": ["The Najdorf setup: ...a6, ...e5, ...Be7 and quick queenside counterplay", "Put pressure down the c-file with ...Rc8 and ...Qc7", "Meet White's kingside attack with a queenside pawn storm — race!"],
+    "mistakes": ["Falling behind in development while grabbing pawns", "Ignoring White's f4-f5 or g4 attacking plans", "Letting White land a knight on d5 permanently"],
+    "quiz": [
+      { "q": "What does Black gain by trading the c-pawn for White's d-pawn?", "options": ["An extra central pawn majority", "A quick checkmate", "The bishop pair", "Nothing"], "answer": 0, "why": "Black ends up with two central pawns versus one — a long-term structural edge." },
+      { "q": "Which file becomes Black's highway for counterplay?", "options": ["The c-file", "The h-file", "The a-file", "The e-file"], "answer": 0, "why": "After ...cxd4 the half-open c-file is where Black's rooks and queen go to work." }
+    ]
+  },
+  {
+    "id": "french",
+    "name": "French Defense",
+    "emoji": "🇫🇷",
+    "color": "black",
+    "history": "Named after a Paris vs London correspondence match in 1834. A tough, strategic defense where Black accepts a cramped position in exchange for a rock-solid structure and counterattacking chances.",
+    "ideas": ["Build the solid e6-d5 pawn chain", "Strike at White's pawn chain with ...c5 (and later ...f6)", "Accept the 'bad' light-squared bishop as the price of solidity", "Counterattack the d4 base of White's pawn chain"],
+    "mainLine": ["e4", "e6", "d4", "d5", "Nc3", "Bb4", "e5", "c5", "a3", "Bxc3+", "bxc3", "Ne7"],
+    "plans": ["Hit d4 with ...c5, ...Nc6 and ...Qb6 all together", "In the Winawer, give up the bishop pair to damage White's queenside pawns", "Play ...f6 at the right moment to challenge the e5 wedge"],
+    "mistakes": ["Never solving the problem of the c8 bishop", "Playing ...f6 too early and exposing the king", "Allowing White a free attacking setup with Bd3 and Qg4"],
+    "quiz": [
+      { "q": "What is Black's main pawn break in the French?", "options": ["...c5 attacking the d4 base", "...h5 attacking the king", "...a5 gaining space", "...g5 attacking f4"], "answer": 0, "why": "The whole French strategy revolves around attacking White's pawn chain at its d4 base with ...c5." },
+      { "q": "Which Black piece is famously difficult to develop in the French?", "options": ["The c8 light-squared bishop", "The b8 knight", "The queen", "The h8 rook"], "answer": 0, "why": "The e6 pawn blocks its own bishop — finding it a future is Black's eternal French problem." }
+    ]
+  },
+  {
+    "id": "caro-kann",
+    "name": "Caro-Kann Defense",
+    "emoji": "🛡️",
+    "color": "black",
+    "history": "Named after Horatio Caro and Marcus Kann who analyzed it in 1886. World champions Capablanca, Botvinnik and Karpov trusted it for its safety and sound structure.",
+    "ideas": ["Support ...d5 with the c-pawn instead of the e-pawn", "Develop the light-squared bishop OUTSIDE the pawn chain first", "Get a French-style structure without the bad bishop", "Aim for a healthy, safe middlegame and a better endgame"],
+    "mainLine": ["e4", "c6", "d4", "d5", "Nc3", "dxe4", "Nxe4", "Bf5", "Ng3", "Bg6", "h4", "h6", "Nf3", "Nd7"],
+    "plans": ["Classical setup: ...Bf5, ...e6, ...Nd7, ...Ngf6, ...Be7 and castle", "Play ...c5 later to challenge White's center", "Head for endgames where your solid pawns shine"],
+    "mistakes": ["Leaving the bishop on f5 where h4-h5 traps it — retreat to g6 in time", "Playing too passively and never striking back with ...c5", "Underestimating White's kingside space after h4"],
+    "quiz": [
+      { "q": "What advantage does the Caro-Kann have over the French Defense?", "options": ["The light-squared bishop develops outside the pawns", "It wins a pawn", "It avoids all theory", "The queen develops faster"], "answer": 0, "why": "By playing ...c6 instead of ...e6 first, the c8 bishop gets to f5 before ...e6 closes the door." },
+      { "q": "Why does the bishop retreat from f5 to g6 after White's Ng3?", "options": ["To avoid being trapped and stay on the strong diagonal", "To prepare ...Bh5", "To attack the rook", "To defend the king"], "answer": 0, "why": "On g6 it keeps its diagonal and can recapture toward the center if White trades." }
+    ]
+  },
+  {
+    "id": "kings-indian",
+    "name": "King's Indian Defense",
+    "emoji": "⚡",
+    "color": "black",
+    "history": "A hypermodern favorite of attacking legends Tal, Fischer and Kasparov. Black lets White build a big center — then attacks it, and the white king, with everything.",
+    "ideas": ["Fianchetto the bishop to g7 — the 'dragon's eye'", "Let White take the center, then strike it with ...e5 or ...c5", "When the center locks, race: Black attacks the king, White attacks the queenside", "The g7 bishop and the ...f5-f4 pawn storm are your weapons"],
+    "mainLine": ["d4", "Nf6", "c4", "g6", "Nc3", "Bg7", "e4", "d6", "Nf3", "O-O", "Be2", "e5", "O-O", "Nc6"],
+    "plans": ["Classical: after d5 by White, play ...f5, ...f4 and storm the kingside with pawns", "Reroute knights: ...Ne7-g6 or ...Nd7-f6 to support ...f5", "Sacrifice material if it opens lines to White's king — the g7 bishop is worth a rook"],
+    "mistakes": ["Playing ...f5 before completing development", "Trading the g7 bishop lightly — it is the soul of the opening", "Answering White's queenside play instead of racing on the kingside"],
+    "quiz": [
+      { "q": "What is Black's typical winning plan in the Classical King's Indian?", "options": ["A kingside pawn storm with ...f5-f4-g4", "Winning the a-pawn", "Trading all pieces", "An early queen raid"], "answer": 0, "why": "When the center is locked, Black throws the kingside pawns forward at White's king — one of the most exciting plans in chess." },
+      { "q": "Which piece is called 'the soul of the King's Indian'?", "options": ["The g7 bishop", "The queen", "The f6 knight", "The a8 rook"], "answer": 0, "why": "The fianchettoed bishop supports both the ...e5 strike and the kingside attack — never trade it carelessly." }
+    ]
+  }
+]
