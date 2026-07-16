@@ -4,12 +4,12 @@ node_modules/
 out/
 
 # Local data (analytics, databases) — never commit
-frontend/.data/
-backend/chessmaster.db
-backend/test_chessmaster.db
+chessmaster-academy/frontend/.data/
+chessmaster-academy/backend/chessmaster.db
+chessmaster-academy/backend/test_chessmaster.db
 
 # Python
-backend/.venv/
+chessmaster-academy/backend/.venv/
 __pycache__/
 *.pyc
 
