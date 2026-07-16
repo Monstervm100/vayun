@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+
+# ThreatLens local runtime data (never commit collected samples / DB)
+data/*.db
+data/*.sqlite
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

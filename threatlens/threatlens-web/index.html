@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThreatLens — CTI Research Console</title>
+  <link rel="stylesheet" href="css/styles.css?v=7" />
+</head>
+<body>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">◈ ThreatLens</div>
+      <div class="brand-tag">CTI Research Console</div>
+
+      <nav class="nav" id="nav">
+        <a class="navitem" href="#campaigns" data-view="campaigns"><span class="ic"></span> Campaigns</a>
+        <a class="navitem" href="#analysis" data-view="analysis"><span class="ic"></span> Email Analysis</a>
+        <a class="navitem" href="#scams" data-view="scams"><span class="ic"></span> Live Scams</a>
+        <a class="navitem" href="#research" data-view="research"><span class="ic"></span> Research</a>
+        <a class="navitem" href="#tests" data-view="tests"><span class="ic"></span> Test Runner</a>
+      </nav>
+
+      <div class="side-block">
+        <div class="side-label">Threat Feed</div>
+        <button class="btn btn-accent btn-block" id="btn-pull-feed">⟳ Pull latest phishing scams</button>
+        <div class="feed-status" id="feed-status">Last updated: —</div>
+      </div>
+
+      <div class="side-foot">
+        <button class="btn btn-ghost btn-sm" id="btn-theme">◐ Theme</button>
+        <button class="btn btn-ghost btn-sm" id="btn-reset" title="Reset the mock database to seed data">↺ Reset DB</button>
+        <div class="visit-counter" id="visit-counter" title="Anonymous count — no cookies, no IP addresses"></div>
+        <div class="side-note">Version 1 · Local mock · $0</div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main" id="main">
+      <!-- views render here -->
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Load order matters: config → data → db → modules → backend → views → app -->
+  <script src="js/config.js?v=7"></script>
+  <script src="js/data/seed.js?v=7"></script>
+  <script src="js/data/feed_latest.js?v=7"></script>
+  <script src="js/backend/db.js?v=7"></script>
+  <script src="js/backend/session.js?v=7"></script>
+  <script src="js/backend/analytics.js?v=7"></script>
+  <script src="js/modules/featureExtraction.js?v=7"></script>
+  <script src="js/modules/taxonomy.js?v=7"></script>
+  <script src="js/modules/threatIntel.js?v=7"></script>
+  <script src="js/modules/humanManipulation.js?v=7"></script>
+  <script src="js/modules/mlEngine.js?v=7"></script>
+  <script src="js/modules/explainability.js?v=7"></script>
+  <script src="js/modules/dataCollection.js?v=7"></script>
+  <script src="js/modules/reporting.js?v=7"></script>
+  <script src="js/modules/education.js?v=7"></script>
+  <script src="js/backend/phishingFeed.js?v=7"></script>
+  <script src="js/backend/api.js?v=7"></script>
+  <script src="js/views/campaign.js?v=7"></script>
+  <script src="js/views/emailAnalysis.js?v=7"></script>
+  <script src="js/views/scams.js?v=7"></script>
+  <script src="js/views/research.js?v=7"></script>
+  <script src="js/tests/testCases.js?v=7"></script>
+  <script src="js/views/tests.js?v=7"></script>
+  <script src="js/app.js?v=7"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+name: Monthly phishing feed refresh
+
+# Pulls the latest phishing scams once a month and commits a fresh snapshot
+# (js/data/feed_latest.js) so the static demo stays up to date.
+on:
+  schedule:
+    - cron: "0 6 1 * *"   # 06:00 UTC on the 1st of every month
+  workflow_dispatch: {}   # allow manual runs from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch latest phishing feed
+        env:
+          FEED_COUNT: "20"
+        run: python scripts/fetch_feed.py
+
+      - name: Commit updated snapshot (if changed)
+        run: |
+          git config user.name "threatlens-bot"
+          git config user.email "threatlens-bot@users.noreply.github.com"
+          git add js/data/feed_latest.js
+          if git diff --cached --quiet; then
+            echo "No feed changes this run."
+          else
+            git commit -m "chore: monthly phishing feed refresh [skip ci]"
+            git push
+          fi
