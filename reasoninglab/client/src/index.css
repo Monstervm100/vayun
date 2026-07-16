@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #f2f0ff;
+  --color-brand-100: #e6e1ff;
+  --color-brand-200: #cdc4ff;
+  --color-brand-300: #ab9cfc;
+  --color-brand-400: #8a70f5;
+  --color-brand-500: #6d4de8;
+  --color-brand-600: #5a35d0;
+  --color-brand-700: #4a2aab;
+  --color-brand-800: #3c2489;
+  --color-brand-900: #31206d;
+
+  --color-sun-100: #fff3d6;
+  --color-sun-300: #ffd166;
+  --color-sun-500: #eda100;
+
+  --color-mint-100: #d9f7ec;
+  --color-mint-500: #1baf7a;
+  --color-mint-700: #0c7a54;
+
+  --color-coral-100: #ffe4dc;
+  --color-coral-500: #eb6834;
+
+  --font-display: "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  --radius-card: 1.25rem;
+}
+
+/* Chart color roles — validated palette (dataviz reference instance).
+   Charts reference these roles, never raw hex, so dark mode swaps in one place. */
+:root {
+  --viz-surface: #fcfcfb;
+  --viz-page: #f9f9f7;
+  --viz-ink: #0b0b0b;
+  --viz-ink-2: #52514e;
+  --viz-muted: #898781;
+  --viz-grid: #e1e0d9;
+  --viz-axis: #c3c2b7;
+  --viz-s1: #2a78d6; /* blue */
+  --viz-s2: #1baf7a; /* aqua */
+  --viz-s3: #eda100; /* yellow */
+  --viz-s4: #008300; /* green */
+  --viz-s5: #4a3aa7; /* violet */
+  --viz-s6: #e34948; /* red */
+  --viz-good: #0ca30c;
+  --viz-good-text: #006300;
+  --viz-warning: #fab219;
+  --viz-serious: #ec835a;
+  --viz-critical: #d03b3b;
+}
+
+html {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #f7f6fb;
+  color: #1c1a2e;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Gentle entrance for cards */
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.rise-in { animation: rise-in 0.35s ease-out both; }
+
+@keyframes pop {
+  0% { transform: scale(0.6); opacity: 0; }
+  70% { transform: scale(1.08); }
+  100% { transform: scale(1); opacity: 1; }
+}
+.pop { animation: pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+.shake { animation: shake 0.3s ease-in-out 0s 2; }
+
+/* Reduced motion: respect user preference */
+@media (prefers-reduced-motion: reduce) {
+  .rise-in, .pop, .shake { animation: none; }
+}

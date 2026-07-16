@@ -23,5 +23,3 @@ __pycache__/
 *.log
 .claude/
 
-# Unrelated project sharing this folder
-reasoninglab/
