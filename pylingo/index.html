@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vayun Bhansali — PyLingo</title>
+<link rel="stylesheet" href="style.css?v=3">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐍</text></svg>">
+<!-- Visitor analytics. Loads only on the live site, so local and offline copies stay silent. -->
+<script>
+  (function () {
+    var local = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+    if (!/^https?:$/.test(location.protocol) || local) return;
+    var s = document.createElement("script");
+    s.defer = true;
+    s.src = "/_vercel/insights/script.js";
+    document.head.appendChild(s);
+  })();
+</script>
+</head>
+<body>
+
+<!-- ===== Top bar ===== -->
+<header class="topbar">
+  <div class="logo" id="logo" role="button" tabindex="0" title="Continue where you left off">🐍 <span>PyLingo</span> <small class="byline">by Mithil Bhansali</small></div>
+  <div class="stats">
+    <div class="stat" title="Day streak">🔥 <span id="stat-streak">0</span></div>
+    <div class="stat" title="Total XP">⚡ <span id="stat-xp">0</span></div>
+    <div class="stat" title="Hearts">❤️ <span id="stat-hearts">5</span></div>
+  </div>
+</header>
+
+<!-- ===== Home: skill path ===== -->
+<main id="screen-home" class="screen">
+  <div class="path" id="path"></div>
+  <footer class="credit">
+    <span class="credit-by">Created by <strong>Mithil Bhansali</strong></span>
+    <span class="credit-for">For <strong>Vayun Bro</strong> 💚</span>
+  </footer>
+</main>
+
+<!-- ===== Lesson screen ===== -->
+<main id="screen-lesson" class="screen hidden">
+  <div class="lesson-top">
+    <button class="btn-quit" id="btn-quit" title="Quit lesson">✕</button>
+    <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+    <div class="lesson-hearts" id="lesson-hearts">❤️ 5</div>
+  </div>
+
+  <div class="exercise" id="exercise-area">
+    <h2 class="prompt" id="ex-prompt"></h2>
+    <pre class="code-block hidden" id="ex-code"></pre>
+    <div class="answer-area" id="answer-area"></div>
+  </div>
+
+  <footer class="check-bar" id="check-bar">
+    <div class="feedback hidden" id="feedback">
+      <div class="feedback-title" id="feedback-title"></div>
+      <div class="feedback-detail" id="feedback-detail"></div>
+    </div>
+    <button class="btn-main" id="btn-check" disabled>CHECK</button>
+  </footer>
+</main>
+
+<!-- ===== Lesson complete ===== -->
+<main id="screen-complete" class="screen hidden">
+  <div class="complete-card">
+    <div class="complete-emoji">🎉</div>
+    <h1>Lesson complete!</h1>
+    <div class="complete-stats">
+      <div class="complete-stat xp-box"><div class="label">XP earned</div><div class="value" id="complete-xp">+0</div></div>
+      <div class="complete-stat acc-box"><div class="label">Accuracy</div><div class="value" id="complete-acc">0%</div></div>
+    </div>
+    <button class="btn-main" id="btn-continue">CONTINUE</button>
+  </div>
+</main>
+
+<!-- ===== Out of hearts ===== -->
+<main id="screen-gameover" class="screen hidden">
+  <div class="complete-card">
+    <div class="complete-emoji">💔</div>
+    <h1>You're out of hearts!</h1>
+    <p class="muted">Don't worry — practice makes perfect. Your hearts have been refilled so you can try again.</p>
+    <button class="btn-main" id="btn-retry">TRY AGAIN</button>
+    <button class="btn-ghost" id="btn-home">BACK TO PATH</button>
+  </div>
+</main>
+
+<script src="data.js?v=3"></script>
+<script src="app.js?v=3"></script>
+</body>
+</html>
