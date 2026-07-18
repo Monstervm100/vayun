@@ -1,0 +1,343 @@
+[
+  {
+    "id": "l1-board", "level": 1, "order": 1, "title": "The Board & The Armies", "emoji": "🏁", "minutes": 5,
+    "steps": [
+      { "type": "explain", "title": "Welcome to the battlefield", "text": ["Chess is played on a board of 64 squares — 8 columns called FILES (a to h) and 8 rows called RANKS (1 to 8). Every square has a name, like e4 or g7, just like map coordinates.", "Each player commands an army of 16: 8 pawns, 2 rooks, 2 knights, 2 bishops, 1 queen and 1 king. White always moves first."] },
+      { "type": "example", "title": "The starting position", "text": "Notice: the bottom-right square is always light, and the queen starts on her own color — white queen on the light d1 square, black queen on the dark d8 square.", "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "highlights": { "d1": "hint", "d8": "hint" } },
+      { "type": "quiz", "questions": [
+        { "q": "How many squares does a chessboard have?", "options": ["64", "60", "72", "56"], "answer": 0, "why": "8 files × 8 ranks = 64 squares." },
+        { "q": "Where does the white queen start?", "options": ["d1 — her own light color", "e1", "d8", "a1"], "answer": 0, "why": "Remember: 'queen on her own color'. The white queen starts on the light square d1." }
+      ] },
+      { "type": "summary", "points": ["Files are columns (a–h), ranks are rows (1–8)", "Every square has a name, like e4", "Queen starts on her own color", "White always moves first"] }
+    ]
+  },
+  {
+    "id": "l1-pieces", "level": 1, "order": 2, "title": "How the Pieces Move", "emoji": "♞", "minutes": 8,
+    "steps": [
+      { "type": "explain", "title": "Six different superpowers", "text": ["ROOKS slide in straight lines. BISHOPS slide diagonally and live on one color forever. The QUEEN combines both — she is worth 9 points! KNIGHTS jump in an L-shape and are the only piece that can hop over others.", "PAWNS march one square forward (two on their first move) but capture diagonally. The KING moves one square in any direction — protect him at all costs, because losing him loses the game.", "Piece values: pawn 1, knight 3, bishop 3, rook 5, queen 9. Use these numbers when deciding trades!"] },
+      { "type": "example", "title": "The knight's L-jump", "text": "From f3 a knight reaches 8 squares in an L-shape: two squares one way, then one square sideways. It can jump over anything in the way!", "fen": "8/8/8/8/8/5N2/8/K1k5 w - - 0 1", "highlights": { "e5": "hint", "g5": "hint", "d4": "hint", "h4": "hint", "d2": "hint", "h2": "hint", "e1": "hint", "g1": "hint" } },
+      { "type": "practice", "title": "Your first move", "task": "Develop your kingside knight to f3 — the best first square for it.", "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "accept": "exact", "correct": ["Nf3"], "success": "Perfect! Nf3 develops the knight toward the center and controls the important e5 and d4 squares.", "hint": "The knight on g1 jumps in an L: two up, one left." },
+      { "type": "quiz", "questions": [
+        { "q": "Which piece can jump over other pieces?", "options": ["The knight", "The rook", "The queen", "The bishop"], "answer": 0, "why": "Only the knight can hop over pieces — that is its superpower." },
+        { "q": "A rook (5) for a bishop (3) trade wins how many points?", "options": ["2", "1", "3", "0"], "answer": 0, "why": "5 − 3 = 2. Winning a rook for a bishop is called 'winning the exchange'." }
+      ] },
+      { "type": "summary", "points": ["Rooks: straight lines. Bishops: diagonals. Queen: both", "Knights jump in an L and hop over pieces", "Pawns move forward, capture diagonally", "Values: P1 N3 B3 R5 Q9 — count before you trade!"] }
+    ]
+  },
+  {
+    "id": "l1-capturing", "level": 1, "order": 3, "title": "Capturing", "emoji": "⚔️", "minutes": 5,
+    "steps": [
+      { "type": "explain", "title": "Taking prisoners", "text": ["You capture by moving your piece onto a square occupied by an enemy piece — the enemy piece is removed from the board.", "Before every capture, ask two questions: Is the piece I want to take DEFENDED? And is MY piece safe after taking? A free (undefended) enemy piece is a gift — always look for gifts!"] },
+      { "type": "practice", "title": "Grab the free pawn", "task": "The black pawn on a7 has no defender. Capture it with your rook!", "fen": "4k3/p7/8/8/8/8/8/R3K3 w - - 0 1", "accept": "exact", "correct": ["Rxa7"], "success": "Exactly! Rxa7 wins a pawn for free. Free material wins games.", "hint": "Your rook slides all the way up the a-file." },
+      { "type": "quiz", "questions": [
+        { "q": "Before capturing, what must you always check?", "options": ["Whether the piece is defended", "The clock", "Your opponent's rating", "Nothing — always capture"], "answer": 0, "why": "If the piece is defended, your capturing piece may be captured right back — count attackers and defenders!" },
+        { "q": "Your bishop (3) can capture a defended rook (5). Good trade?", "options": ["Yes — you win 2 points even if recaptured", "No — never capture defended pieces", "Only in the endgame", "Only with check"], "answer": 0, "why": "Bishop takes rook, they recapture your bishop: you gained 5, lost 3. +2 for you!" }
+      ] },
+      { "type": "summary", "points": ["Capture by landing on an enemy piece's square", "Always ask: is it defended? Am I safe after?", "Count the points before trading", "Free pieces are gifts — scan for them every move"] }
+    ]
+  },
+  {
+    "id": "l1-check", "level": 1, "order": 4, "title": "Check!", "emoji": "⚠️", "minutes": 5,
+    "steps": [
+      { "type": "explain", "title": "Attacking the king", "text": ["When a piece attacks the enemy king, that is CHECK. The king is never actually captured — but a player in check MUST fix it immediately.", "There are exactly three ways out of check: MOVE the king, BLOCK the attack with another piece, or CAPTURE the checking piece. Remember: Move, Block, Capture."] },
+      { "type": "practice", "title": "Give a check", "task": "Move your queen to any square where it attacks the black king.", "fen": "4k3/8/8/8/8/8/8/Q3K3 w - - 0 1", "accept": "check", "success": "Check! The black king must respond immediately — you are controlling the game.", "hint": "Try the a4-e8 diagonal, or the 8th rank." },
+      { "type": "quiz", "questions": [
+        { "q": "What are the three ways to get out of check?", "options": ["Move, Block, Capture", "Castle, Push, Trade", "Resign, Draw, Win", "Run, Hide, Attack"], "answer": 0, "why": "Move the king, block the line, or capture the checker — if none work, it's checkmate." },
+        { "q": "Can you ignore a check and make a different move?", "options": ["No — you must answer the check immediately", "Yes, once per game", "Yes, if you say 'pass'", "Only in blitz"], "answer": 0, "why": "Any move that leaves your own king in check is illegal." }
+      ] },
+      { "type": "summary", "points": ["Check = the king is attacked", "You must respond: Move, Block, or Capture", "You can never leave your own king in check", "Checks force your opponent's hand — they are powerful tools"] }
+    ]
+  },
+  {
+    "id": "l1-checkmate", "level": 1, "order": 5, "title": "Checkmate — Winning the Game", "emoji": "🏆", "minutes": 6,
+    "steps": [
+      { "type": "explain", "title": "The goal of chess", "text": ["CHECKMATE means the king is in check and there is NO way out — no move, no block, no capture. The game ends immediately. That is how you win!", "The most common beginner checkmate is the BACK RANK MATE: a rook or queen invades the last rank while the enemy king is trapped behind its own pawns."] },
+      { "type": "example", "title": "The trapped king", "text": "Black's king looks safe behind its pawns — but those same pawns block every escape square. The back rank is a highway for your rook.", "fen": "6k1/5ppp/8/8/8/8/5PPP/1R4K1 w - - 0 1", "arrows": [["b1", "b8"]] },
+      { "type": "practice", "title": "Deliver checkmate!", "task": "Find the checkmate in one move.", "fen": "6k1/5ppp/8/8/8/8/5PPP/1R4K1 w - - 0 1", "accept": "mate", "success": "CHECKMATE! The king is checked on the back rank and its own pawns block every exit. Game over!", "hint": "Slide the rook all the way to the 8th rank." },
+      { "type": "quiz", "questions": [
+        { "q": "What makes checkmate different from check?", "options": ["There is no legal way to escape", "The queen delivers it", "It happens on the 8th rank", "The king is captured"], "answer": 0, "why": "Checkmate = check with no escape. The game ends on the spot." },
+        { "q": "What often causes a back rank mate?", "options": ["The king trapped behind its own unmoved pawns", "Too many queens", "A knight on the rim", "Castling too early"], "answer": 0, "why": "The f7-g7-h7 pawn shield protects the king from the front but traps it against back-rank invaders. Make 'luft' (a pawn hole) when needed!" }
+      ] },
+      { "type": "summary", "points": ["Checkmate ends the game — that is the goal", "Check + no move, no block, no capture = mate", "Watch your back rank in every game", "Make an escape hole ('luft') for your castled king when rooks lurk"] }
+    ]
+  },
+  {
+    "id": "l1-draws", "level": 1, "order": 6, "title": "Draws & Stalemate", "emoji": "🤝", "minutes": 5,
+    "steps": [
+      { "type": "explain", "title": "When nobody wins", "text": ["Not every game has a winner. A game is drawn by: STALEMATE (no legal moves but NOT in check), agreement, threefold repetition, the 50-move rule, or when neither side has enough pieces to mate.", "Stalemate is the great escape artist's trick — if you are winning big, be careful not to leave your opponent with zero moves!"] },
+      { "type": "example", "title": "Stalemate — the tragic draw", "text": "Black to move: the king is NOT in check, but every square it could go to is attacked. No legal moves = stalemate. White's huge advantage evaporates into a draw!", "fen": "7k/5Q2/6K1/8/8/8/8/8 b - - 0 1", "highlights": { "g8": "bad", "h7": "bad", "g7": "bad" } },
+      { "type": "quiz", "questions": [
+        { "q": "Stalemate happens when a player has no legal moves and is…", "options": ["NOT in check — it's a draw", "In check — it's a loss", "Ahead on time", "Missing a queen"], "answer": 0, "why": "No moves + not in check = stalemate = draw. No moves + in check = checkmate." },
+        { "q": "You have king + queen vs king. How do you avoid stalemate?", "options": ["Always leave the enemy king at least one safe square until your king helps mate", "Chase the king with checks", "Move only the queen", "Trade the queen"], "answer": 0, "why": "Shrink the box patiently and keep one escape square available until mate is actually delivered." }
+      ] },
+      { "type": "summary", "points": ["Stalemate: no moves, not in check → draw", "Also drawn: repetition, 50-move rule, agreement, bare kings", "When winning big, watch for stalemate tricks", "When losing big, hunt for stalemate tricks!"] }
+    ]
+  },
+  {
+    "id": "l1-castling", "level": 1, "order": 7, "title": "Castling — The King's Safe House", "emoji": "🏰", "minutes": 6,
+    "steps": [
+      { "type": "explain", "title": "Two pieces, one move", "text": ["Castling is the only move where two of your pieces move at once: the king slides TWO squares toward a rook, and the rook jumps to the other side. It tucks your king safely in the corner AND activates your rook.", "The rules: neither the king nor that rook has moved before, no pieces in between, the king is not in check, and the king does not pass through or land on an attacked square."] },
+      { "type": "practice", "title": "Castle your king to safety", "task": "The path is clear — castle kingside!", "fen": "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4", "accept": "castle", "success": "Castled! Your king is safe in the corner and your rook is ready for action. Aim to do this in the first 10 moves of every game.", "hint": "Drag the king two squares toward the h1 rook." },
+      { "type": "quiz", "questions": [
+        { "q": "How far does the king move when castling?", "options": ["Exactly two squares toward the rook", "One square", "Three squares", "To the corner"], "answer": 0, "why": "King two squares toward the rook; the rook hops to the square the king crossed." },
+        { "q": "Can you castle if your king was checked earlier but escaped?", "options": ["Yes — as long as the king itself never moved", "No — check forever bans castling", "Only queenside", "Only before move 10"], "answer": 0, "why": "Past checks don't matter. What matters: king and rook unmoved, path clear, and no check NOW or on the king's path." }
+      ] },
+      { "type": "summary", "points": ["Castling = king two squares + rook jumps over", "It needs: unmoved king & rook, clear path, no checks on the way", "Castle early — usually within the first 10 moves", "It protects the king AND develops a rook: two jobs, one move"] }
+    ]
+  },
+  {
+    "id": "l1-promotion", "level": 1, "order": 8, "title": "Pawn Promotion", "emoji": "🎖️", "minutes": 4,
+    "steps": [
+      { "type": "explain", "title": "The pawn's dream", "text": ["When a pawn reaches the far end of the board, it PROMOTES: it transforms into a queen, rook, bishop or knight — your choice. Almost always choose the queen!", "This is why endgames are all about pawns: every little soldier is a future queen. You can even have two or more queens at once."] },
+      { "type": "practice", "title": "Crown a new queen", "task": "March your pawn to the last rank and promote it.", "fen": "8/4P3/8/8/8/2k5/8/2K5 w - - 0 1", "accept": "promote", "success": "A new queen! From one point to nine — the most dramatic upgrade in chess.", "hint": "Push the e-pawn one more square." },
+      { "type": "quiz", "questions": [
+        { "q": "Which pieces can a pawn become?", "options": ["Queen, rook, bishop or knight", "Only a queen", "Any piece including king", "Only a captured piece"], "answer": 0, "why": "Any piece except a king — and it does not need to have been captured first." },
+        { "q": "Why would you ever promote to a knight instead of a queen?", "options": ["A knight check might fork or avoid stalemate", "Knights are worth more", "It looks cool", "You never would"], "answer": 0, "why": "Rarely, an 'underpromotion' to a knight gives an instant fork or avoids a stalemate that a queen would cause." }
+      ] },
+      { "type": "summary", "points": ["Pawn reaches the last rank → becomes Q, R, B or N", "Queen is almost always the right choice", "Every pawn is a future queen — value them in endgames", "Underpromotion exists for special tricks"] }
+    ]
+  },
+  {
+    "id": "l1-enpassant", "level": 1, "order": 9, "title": "En Passant — The Sneaky Capture", "emoji": "🥷", "minutes": 4,
+    "steps": [
+      { "type": "explain", "title": "The strangest rule in chess", "text": ["When an enemy pawn uses its two-square first move to slip PAST your pawn, you may capture it 'in passing' — as if it had only moved one square. This is EN PASSANT (French for 'in passing').", "One catch: you must do it IMMEDIATELY, on the very next move, or the chance is gone forever."] },
+      { "type": "practice", "title": "Catch the runner", "task": "Black's f-pawn just jumped two squares past your e5 pawn. Capture it en passant!", "fen": "rnbqkbnr/ppp1p1pp/8/3pPp2/8/8/PPPP1PPP/RNBQKBNR w KQkq f6 0 3", "accept": "exact", "correct": ["exf6"], "success": "En passant! Your pawn captures diagonally onto f6 and the black pawn disappears from f5. Sneaky and legal!", "hint": "Move your e5 pawn diagonally to f6 — the empty square behind the black pawn." },
+      { "type": "quiz", "questions": [
+        { "q": "When can you capture en passant?", "options": ["Immediately after an enemy pawn's two-square jump lands beside your pawn", "Any time two pawns touch", "Once per game", "Only with your king nearby"], "answer": 0, "why": "It's only legal on the very next move after the two-square jump — then the right disappears." },
+        { "q": "Where does your capturing pawn land?", "options": ["On the square the enemy pawn skipped", "On the enemy pawn's square", "It stays put", "Anywhere on that file"], "answer": 0, "why": "You capture as if the pawn had moved only one square — landing behind it." }
+      ] },
+      { "type": "summary", "points": ["En passant captures a pawn that jumped two squares past you", "Your pawn lands on the skipped square", "Use it immediately or lose it", "Congratulations — you now know EVERY rule of chess!"] }
+    ]
+  },
+  {
+    "id": "l2-opening-principles", "level": 2, "order": 1, "title": "Control the Center", "emoji": "🎯", "minutes": 6,
+    "steps": [
+      { "type": "explain", "title": "The high ground", "text": ["The four central squares — e4, d4, e5, d5 — are the high ground of chess. Pieces in the center control more squares and reach both sides of the board quickly.", "A knight in the center controls 8 squares; in the corner, just 2! Start every game by fighting for the center with your pawns and pieces."] },
+      { "type": "example", "title": "Center vs corner", "text": "Compare: the knight on d5 radiates power in every direction, while a knight on a1 would be nearly useless. 'A knight on the rim is dim!'", "fen": "8/8/8/3N4/8/8/8/K1k5 w - - 0 1", "highlights": { "e7": "hint", "c7": "hint", "b6": "hint", "f6": "hint", "b4": "hint", "f4": "hint", "c3": "hint", "e3": "hint" } },
+      { "type": "practice", "title": "Claim the center", "task": "Make the strongest first move: grab the center with a pawn.", "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "accept": "exact", "correct": ["e4", "d4"], "success": "Perfect! 1.e4 and 1.d4 are the two most popular first moves in chess history — both plant a pawn in the center and open lines for your pieces.", "hint": "Push the e-pawn or d-pawn two squares." },
+      { "type": "quiz", "questions": [
+        { "q": "Which are the four center squares?", "options": ["e4, d4, e5, d5", "a1, a8, h1, h8", "e1, d1, e8, d8", "c3, f3, c6, f6"], "answer": 0, "why": "The heart of the board — control them and you control the game." },
+        { "q": "Why is a centralized knight stronger than one on the edge?", "options": ["It controls up to 8 squares instead of 2-4", "It's harder to see", "It defends the king", "It can promote"], "answer": 0, "why": "Central pieces have maximum mobility and influence both flanks." }
+      ] },
+      { "type": "summary", "points": ["e4, d4, e5, d5 are the key squares", "Open with a center pawn: 1.e4 or 1.d4", "Central pieces control the most squares", "A knight on the rim is dim"] }
+    ]
+  },
+  {
+    "id": "l2-development", "level": 2, "order": 2, "title": "Develop Your Pieces", "emoji": "🚀", "minutes": 6,
+    "steps": [
+      { "type": "explain", "title": "Get everyone to work", "text": ["Development means bringing your knights and bishops off the back rank to active squares. A piece at home does nothing — an army wins by showing up to the battle!", "The golden order: knights before bishops, castle early, connect your rooks. Try not to move the same piece twice before move 10, and don't push side pawns without a reason."] },
+      { "type": "practice", "title": "Best developing move", "task": "Black just played 1...e5. Develop a piece toward the center — and attack something while you're at it!", "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2", "accept": "exact", "correct": ["Nf3"], "success": "Nf3 — the perfect developing move: it activates the knight, controls the center, attacks the e5 pawn, AND prepares castling. Four jobs in one move!", "hint": "Which knight move attacks the e5 pawn?" },
+      { "type": "quiz", "questions": [
+        { "q": "Which pieces should usually develop first?", "options": ["Knights and bishops", "The queen and rooks", "The a- and h-pawns", "The king"], "answer": 0, "why": "Minor pieces first, castle, THEN decide where the queen and rooks belong." },
+        { "q": "What's wrong with moving one piece many times in the opening?", "options": ["You fall behind — the rest of your army stays asleep", "Nothing, if it's the queen", "It's illegal", "It loses a pawn"], "answer": 0, "why": "Every repeated move is a free turn gifted to your opponent's development." }
+      ] },
+      { "type": "summary", "points": ["Bring knights and bishops out early", "Each move should develop something new", "Aim: all minor pieces out + castled by move 10", "Development = more soldiers in the fight"] }
+    ]
+  },
+  {
+    "id": "l2-castle-early", "level": 2, "order": 3, "title": "Castle Early", "emoji": "🛡️", "minutes": 5,
+    "steps": [
+      { "type": "explain", "title": "Safety first", "text": ["A king stuck in the center is a target: files open, checks rain in, and disaster follows. Castling solves this in one move.", "Statistics from millions of games agree: players who castle in the first ten moves win far more often. Make it a habit, not a choice."] },
+      { "type": "practice", "title": "Tuck the king away", "task": "Everything is ready. Castle kingside now!", "fen": "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4", "accept": "castle", "success": "Safe! Now your king hides behind three loyal pawns while your rook eyes the center files.", "hint": "King slides two squares toward h1." },
+      { "type": "quiz", "questions": [
+        { "q": "Why is a king in the center dangerous in the middlegame?", "options": ["Center files open up and checks pour in", "It blocks the queen", "It can't capture", "It's not dangerous"], "answer": 0, "why": "Once pawns trade in the center, every open file and diagonal points at an uncastled king." },
+        { "q": "After castling kingside, which pawns shield your king?", "options": ["f, g and h pawns", "a, b and c pawns", "d and e pawns", "None"], "answer": 0, "why": "Keep that shield intact — every pawn move in front of your king lets in a draft." }
+      ] },
+      { "type": "summary", "points": ["Castle within the first 10 moves", "A central king is a magnet for tactics", "Don't wreck your castle by pushing its pawns", "Castling also brings a rook into the game"] }
+    ]
+  },
+  {
+    "id": "l2-queen-early", "level": 2, "order": 4, "title": "Don't Bring the Queen Out Early", "emoji": "👸", "minutes": 5,
+    "steps": [
+      { "type": "explain", "title": "The impatient queen", "text": ["It's tempting to attack with the queen right away — she's the strongest piece! But an early queen becomes a TARGET: every enemy developing move attacks her, and she must run while your opponent builds an army for free.", "Punish early queen raids by developing pieces WITH TEMPO — each move should develop AND attack the exposed queen."] },
+      { "type": "example", "title": "White tries the cheap trick", "text": "White played 2.Qh5 hoping for a fast mate on f7. Watch how Black develops with tempo: Nc6 defends e5, then Nf6 hits the queen, and White's 'attack' turns into wasted moves.", "fen": "rnbqkbnr/pppp1ppp/8/4p2Q/4P3/8/PPPP1PPP/RNB1KBNR b KQkq - 1 2", "arrows": [["b8", "c6"], ["g8", "f6"]] },
+      { "type": "practice", "title": "Defend and develop", "task": "White's queen eyes e5 (and dreams of f7). Play the move that defends the pawn AND develops a piece.", "fen": "rnbqkbnr/pppp1ppp/8/4p2Q/4P3/8/PPPP1PPP/RNB1KBNR b KQkq - 1 2", "accept": "exact", "correct": ["Nc6"], "success": "Exactly! Nc6 defends e5 and develops. Next you'll play Nf6 or g6, gaining MORE time by attacking the wandering queen.", "hint": "Which knight defends the e5 pawn?" },
+      { "type": "quiz", "questions": [
+        { "q": "What's the problem with early queen attacks?", "options": ["The queen becomes a target and you lose time", "The queen is too weak", "It's against the rules", "It always loses the queen"], "answer": 0, "why": "Strong opponents develop while attacking your queen — you make queen moves, they build an army." },
+        { "q": "What does 'developing with tempo' mean?", "options": ["A developing move that also makes a threat", "Playing very fast", "Moving two pieces at once", "Castling early"], "answer": 0, "why": "When your developing move attacks something, your opponent must respond — you develop for free." }
+      ] },
+      { "type": "summary", "points": ["Early queen sorties waste time against good defense", "Punish them: develop with tempo", "Knights and bishops first, queen later", "Beware Scholar's Mate — Nc6, then g6 or Qe7 defends easily"] }
+    ]
+  },
+  {
+    "id": "l2-coordination", "level": 2, "order": 5, "title": "Piece Coordination", "emoji": "🤝", "minutes": 5,
+    "steps": [
+      { "type": "explain", "title": "A team, not soloists", "text": ["One piece rarely wins a game — pieces working TOGETHER do. Coordination means your pieces defend each other, aim at the same targets, and don't block each other's paths.", "Before attacking, count your attackers vs their defenders. You usually need MORE attackers than defenders for a strike to work."] },
+      { "type": "example", "title": "Teamwork on f7", "text": "In the Italian Game, the bishop and knight both point at f7 — a coordinated battery. Neither alone is a threat; together they create real danger.", "fen": "r1bqkbnr/pppp1ppp/2n5/4p1N1/2B1P3/8/PPPP1PPP/RNBQK2R b KQkq - 5 4", "arrows": [["c4", "f7"], ["g5", "f7"]] },
+      { "type": "quiz", "questions": [
+        { "q": "You want to win a pawn defended twice. How many attackers do you usually need?", "options": ["Three — more than the defenders", "One", "Two — same as defenders", "It can't be won"], "answer": 0, "why": "With equal attackers and defenders the exchanges usually favor the defender. Bring one more!" },
+        { "q": "Which is a sign of GOOD coordination?", "options": ["Your pieces defend each other and share a target", "All pieces on one file", "The queen far from the action", "Knights on the rim"], "answer": 0, "why": "Connected, mutually-defending pieces aimed at one weakness are the recipe for winning attacks." }
+      ] },
+      { "type": "summary", "points": ["Pieces are strongest in teams", "Count attackers vs defenders before striking", "Don't block your own pieces", "Aim multiple pieces at one weakness"] }
+    ]
+  },
+  {
+    "id": "l3-fork", "level": 3, "order": 1, "title": "The Fork", "emoji": "🍴", "minutes": 7,
+    "steps": [
+      { "type": "explain", "title": "One attacker, two targets", "text": ["A FORK attacks two (or more) enemy pieces at the same time with one piece. Your opponent can only save one — you capture the other!", "Knights are the fork champions because their weird jump can hit pieces that can't hit back. The deadliest is the ROYAL FORK: king and queen attacked at once."] },
+      { "type": "example", "title": "The royal fork", "text": "The knight on e7 would check the king AND attack the queen. Black must move the king — and the queen falls.", "fen": "6k1/5ppp/2N5/3q4/8/8/5PPP/6K1 w - - 0 1", "arrows": [["c6", "e7"]], "highlights": { "g8": "bad", "d5": "bad" } },
+      { "type": "practice", "title": "Execute the royal fork", "task": "Jump your knight to the square that attacks both king and queen.", "fen": "6k1/5ppp/2N5/3q4/8/8/5PPP/6K1 w - - 0 1", "accept": "exact", "correct": ["Ne7+"], "success": "A royal fork! The king must move out of check, and next turn you take the queen. This single pattern wins thousands of games every day.", "hint": "Look for the knight square that gives CHECK and touches the queen's square in an L." },
+      { "type": "quiz", "questions": [
+        { "q": "Why are knight forks especially dangerous?", "options": ["The forked pieces usually can't capture the knight back", "Knights are worth more", "They can't be seen", "They always give check"], "answer": 0, "why": "A queen, rook or king attacked by a knight cannot attack the knight back (unless adjacent) — the fork is 'clean'." },
+        { "q": "Which fork is called a 'royal fork'?", "options": ["King + queen forked together", "Two rooks forked", "King + pawn", "Queen + bishop"], "answer": 0, "why": "Attacking king and queen at once — the king must move and the queen is lost." }
+      ] },
+      { "type": "summary", "points": ["Fork = one piece attacks two targets", "Knights are the best forkers", "Forks with check are strongest — the opponent has no choice", "Look for forks after every enemy move: loose pieces invite them"] }
+    ]
+  },
+  {
+    "id": "l3-pin", "level": 3, "order": 2, "title": "The Pin", "emoji": "📌", "minutes": 7,
+    "steps": [
+      { "type": "explain", "title": "Frozen in place", "text": ["A PIN freezes an enemy piece: moving it would expose a MORE VALUABLE piece behind it on the same line. Only bishops, rooks and queens can pin.", "An ABSOLUTE pin (king behind) makes moving the pinned piece illegal. A RELATIVE pin (queen or rook behind) makes it merely terrible. Attack a pinned piece again — it can't run!"] },
+      { "type": "example", "title": "Pinned and helpless", "text": "The bishop pins the knight to the king — the knight legally CANNOT move. Now the d-pawn attacks it, and nothing can save it.", "fen": "4k3/p4ppp/2n5/1B6/3P4/8/PP3PPP/4K3 w - - 0 1", "arrows": [["b5", "e8"], ["d4", "d5"]], "highlights": { "c6": "bad" } },
+      { "type": "practice", "title": "Pile on the pin", "task": "The knight is pinned. Attack it with your pawn!", "fen": "4k3/p4ppp/2n5/1B6/3P4/8/PP3PPP/4K3 w - - 0 1", "accept": "exact", "correct": ["d5"], "success": "The pinned knight cannot escape — you win a full piece next move. 'Pin it, then win it!'", "hint": "Which pawn move attacks c6?" },
+      { "type": "quiz", "questions": [
+        { "q": "What is an absolute pin?", "options": ["The piece is pinned to the KING and can't legally move", "A pin lasting 10 moves", "A pin by a queen", "Two pins at once"], "answer": 0, "why": "With the king behind, moving the pinned piece would be an illegal self-check." },
+        { "q": "What's the best way to exploit a pinned piece?", "options": ["Attack it again — especially with pawns", "Ignore it", "Trade queens", "Castle"], "answer": 0, "why": "A pinned piece can't run away, so every new attacker is pure profit." }
+      ] },
+      { "type": "summary", "points": ["Pin = piece can't move without exposing something bigger", "Only line pieces pin: B, R, Q", "Absolute pin (to king) = frozen by law", "Pile attackers onto pinned pieces, especially pawns"] }
+    ]
+  },
+  {
+    "id": "l3-skewer", "level": 3, "order": 3, "title": "The Skewer", "emoji": "🍢", "minutes": 6,
+    "steps": [
+      { "type": "explain", "title": "The reverse pin", "text": ["A SKEWER is a pin flipped around: the MORE valuable piece stands in front and is attacked first. When it moves out of the way, you capture the piece hiding behind it.", "King skewers are deadly: the king MUST move out of check, and whatever stands behind it is yours."] },
+      { "type": "practice", "title": "Skewer king and queen", "task": "Check the king so that when it moves, you win the queen behind it.", "fen": "qk6/pp6/8/8/8/8/8/6KR w - - 0 1", "accept": "exact", "correct": ["Rh8+"], "success": "Skewered! The king must step off the 8th rank, and your rook gobbles the queen behind it.", "hint": "Put your rook on the same RANK as both king and queen — with check." },
+      { "type": "quiz", "questions": [
+        { "q": "How does a skewer differ from a pin?", "options": ["The more valuable piece is in FRONT", "It uses knights", "It only works on files", "It doesn't win material"], "answer": 0, "why": "Pin: big piece behind. Skewer: big piece in front — it must move and expose its friend." },
+        { "q": "Why are check-skewers so strong?", "options": ["The king is forced to move — no choice at all", "They can't be blocked", "They win the king", "They're quiet moves"], "answer": 0, "why": "A check demands an immediate response, so the piece behind the king is guaranteed to fall." }
+      ] },
+      { "type": "summary", "points": ["Skewer = valuable piece in front, victim behind", "Line pieces only: B, R, Q", "Check-skewers are forcing and deadly", "Watch for kings and queens on the same line — yours too!"] }
+    ]
+  },
+  {
+    "id": "l3-discovered-attack", "level": 3, "order": 4, "title": "Discovered Attacks", "emoji": "🎭", "minutes": 6,
+    "steps": [
+      { "type": "explain", "title": "Two attacks in one move", "text": ["Move one piece, and a second piece's attack is UNCOVERED behind it — that's a discovered attack. The moving piece can grab or threaten something else at the same time: two threats, one move!", "The nastiest version is the DISCOVERED CHECK: the uncovered piece checks the king while the moving piece takes whatever it wants — it's basically a free move."] },
+      { "type": "practice", "title": "Unleash the rook", "task": "Move the knight so the rook gives check — while the knight attacks the queen!", "fen": "1q2k3/5pp1/8/4N3/8/8/8/4R1K1 w - - 0 1", "accept": "exact", "correct": ["Nc6"], "success": "Discovered check! Black must answer the rook's check, and your knight captures the queen next move. Devastating!", "hint": "The knight sits between your rook and their king. Where can it jump to ALSO attack the queen?" },
+      { "type": "quiz", "questions": [
+        { "q": "In a discovered check, which piece gives the check?", "options": ["The piece that was UNCOVERED, not the one that moved", "The piece that moved", "Both always", "The king"], "answer": 0, "why": "The mover steps aside; the piece behind delivers check — leaving the mover free to cause chaos." },
+        { "q": "Why is a discovered check almost like a free move?", "options": ["The opponent must answer the check, ignoring the mover's threat", "It ends the game", "It can't be answered", "It gains time on the clock"], "answer": 0, "why": "Whatever the moving piece attacks (or captures), your opponent has no time to respond." }
+      ] },
+      { "type": "summary", "points": ["Moving one piece uncovers another's attack", "The mover makes its OWN threat — two threats at once", "Discovered check = a nearly free move", "Line up rook/bishop/queen behind a mobile piece to create one"] }
+    ]
+  },
+  {
+    "id": "l3-deflection", "level": 3, "order": 5, "title": "Deflection & Removing the Defender", "emoji": "🧲", "minutes": 6,
+    "steps": [
+      { "type": "explain", "title": "Sabotage the bodyguard", "text": ["Every defended piece relies on its bodyguard. DEFLECTION drags the bodyguard away with a threat it must answer; REMOVING THE DEFENDER simply captures or chases it. Either way, the protected piece becomes free food.", "Ask of every enemy piece: 'What job is it doing? What happens if I make it leave?' Overloaded pieces — doing two jobs at once — are the juiciest targets."] },
+      { "type": "practice", "title": "Deflect the rook", "task": "Black's rook is the only thing stopping your pawn from promoting. Force it to make an impossible choice!", "fen": "1r4k1/1P3ppp/8/8/8/8/8/R5K1 w - - 0 1", "accept": "exact", "correct": ["Ra8"], "success": "Beautiful! If the rook captures yours, your pawn recaptures and promotes with checkmate. If it runs, the pawn promotes anyway. The defender is deflected!", "hint": "Attack the b8 rook with your own rook — right on the promotion rank." },
+      { "type": "quiz", "questions": [
+        { "q": "What is an 'overloaded' piece?", "options": ["A piece defending two things at once — it can't do both", "A piece worth 9 points", "A piece with no moves", "A doubled pawn"], "answer": 0, "why": "Give an overloaded defender a second problem, and one of its jobs must fail." },
+        { "q": "The famous Opera Game finished with Qb8+!! Nxb8 Rd8#. What theme is that?", "options": ["Deflection — the knight is dragged away from covering d8", "A fork", "A pin", "En passant"], "answer": 0, "why": "Morphy's queen sacrifice forced the knight to abandon the d8 square, allowing the rook mate." }
+      ] },
+      { "type": "summary", "points": ["Defenders are targets: capture, chase, or deflect them", "Overloaded pieces can't do two jobs", "Sacrifices are fair payment for removing a key defender", "Always ask: what is THIS piece defending?"] }
+    ]
+  },
+  {
+    "id": "l3-board-safety", "level": 3, "order": 6, "title": "Blunder-Proof Your Moves", "emoji": "🔒", "minutes": 7,
+    "steps": [
+      { "type": "explain", "title": "The blunder check", "text": ["Most games under 1200 are decided by hanging pieces — gifts left undefended. The fix is a HABIT, not talent: before EVERY move, run the blunder check.", "The routine: 1) What did their last move attack? 2) After my move, can anything of mine be taken for free? 3) Checks, Captures, Threats — scan theirs AND mine. Ten seconds that save your queen."] },
+      { "type": "practice", "title": "Spot the gift", "task": "Your opponent just blundered. Scan the board and take the free piece!", "fen": "6k1/5ppp/8/3n4/8/8/5PPP/3R2K1 w - - 0 1", "accept": "exact", "correct": ["Rxd5"], "success": "Free knight! You spotted it because you SCANNED. Do this scan every single move of every game.", "hint": "Check each black piece: which one has no defender?" },
+      { "type": "quiz", "questions": [
+        { "q": "What should you ask IMMEDIATELY after your opponent moves?", "options": ["What does that move attack or threaten?", "How much time is left?", "What's my plan?", "Should I offer a draw?"], "answer": 0, "why": "Their move changed the board. Find its point before you do anything else." },
+        { "q": "What does 'CCT' stand for in the safety scan?", "options": ["Checks, Captures, Threats", "Castle, Center, Trade", "Count, Calculate, Take", "Chess Club Tournament"], "answer": 0, "why": "Scan all Checks, Captures and Threats — for both sides — before committing to your move." }
+      ] },
+      { "type": "summary", "points": ["Hanging pieces decide most beginner games", "Every move: what did their move threaten?", "Every move: is my piece safe where it lands?", "CCT — Checks, Captures, Threats — both ways, every turn"] }
+    ]
+  },
+  {
+    "id": "l4-planning", "level": 4, "order": 1, "title": "Making a Plan", "emoji": "🗺️", "minutes": 6,
+    "steps": [
+      { "type": "explain", "title": "Play with a purpose", "text": ["'A bad plan is better than no plan.' When there's no tactic on the board, ask three questions: Where are the WEAKNESSES? Which of my pieces is WORST placed? What does my opponent WANT?", "A plan can be tiny: 'improve my worst piece', 'trade off their best defender', 'put a rook on the open file'. String small plans together and your position improves move by move."] },
+      { "type": "quiz", "questions": [
+        { "q": "When there is no tactic available, what should guide your move?", "options": ["Improving your worst-placed piece", "Moving the queen", "Pushing a random pawn", "Offering a trade"], "answer": 0, "why": "Upgrading your least active piece is the most reliable plan in any quiet position." },
+        { "q": "What are typical targets for a plan?", "options": ["Weak pawns, weak squares, and an exposed king", "The corner squares", "Your own pieces", "The opponent's clock"], "answer": 0, "why": "Plans aim at things that cannot easily run away: structural weaknesses and unsafe kings." }
+      ] },
+      { "type": "summary", "points": ["No tactic? Make a small plan", "Find weaknesses, improve your worst piece", "Ask what your opponent wants — and stop it", "Small improvements add up to winning positions"] }
+    ]
+  },
+  {
+    "id": "l4-pawn-structure", "level": 4, "order": 2, "title": "Pawn Structure", "emoji": "🧱", "minutes": 6,
+    "steps": [
+      { "type": "explain", "title": "The skeleton of the position", "text": ["Pawns can't move backward — every pawn move is forever. The pawn structure is the skeleton that decides where pieces belong and who is attacking where.", "Learn the weak types: DOUBLED pawns (stacked, can't defend each other), ISOLATED pawns (no neighbor to ever protect them), and BACKWARD pawns (left behind, stuck on a half-open file). Weak pawns must be defended by PIECES — turning your army into babysitters."] },
+      { "type": "example", "title": "Strong vs weak pawns", "text": "White's pawns form healthy chains. Black has an isolated pawn on d5 (no c- or e-pawn neighbors) — a permanent target that pieces must babysit forever.", "fen": "4k3/pp3pp1/8/3p4/8/2P5/PP3PPP/4K3 w - - 0 1", "highlights": { "d5": "bad" } },
+      { "type": "quiz", "questions": [
+        { "q": "What makes an isolated pawn weak?", "options": ["No friendly pawn can EVER defend it", "It's worth less than 1 point", "It can't capture", "It moves slower"], "answer": 0, "why": "With no pawn neighbors, only pieces can guard it — forever tying them down." },
+        { "q": "Why think twice before every pawn move?", "options": ["Pawns can never move backward — the change is permanent", "Pawns are the strongest piece", "It loses time", "You only get 8 pawn moves"], "answer": 0, "why": "Every pawn move creates permanent strengths AND permanent weaknesses. Push with purpose." }
+      ] },
+      { "type": "summary", "points": ["Pawn structure is the position's skeleton", "Doubled, isolated, backward = weak pawns", "Weak pawns tie your pieces to defense", "Pawn moves are forever — push thoughtfully"] }
+    ]
+  },
+  {
+    "id": "l4-open-files", "level": 4, "order": 3, "title": "Open Files & the 7th Rank", "emoji": "🛣️", "minutes": 6,
+    "steps": [
+      { "type": "explain", "title": "Highways for rooks", "text": ["An OPEN file has no pawns on it — a highway straight into the enemy camp. Rooks belong on open files; a rook behind its own pawn is a rook in prison.", "The dream destination is the 7TH RANK: from there a rook eats pawns sideways and traps the enemy king on its back rank. 'A rook on the 7th is worth a pawn.'"] },
+      { "type": "practice", "title": "Seize the open file", "task": "The e-file is completely open. Claim it with a rook!", "fen": "r4rk1/ppp2ppp/8/8/8/8/PPP2PPP/R4RK1 w - - 0 1", "accept": "exact", "correct": ["Rfe1", "Rae1"], "success": "Claimed! Whoever controls the open file controls the invasion route. Next stop: the 7th rank.", "hint": "Which file has no pawns at all? Put a rook on it." },
+      { "type": "quiz", "questions": [
+        { "q": "What is an open file?", "options": ["A file with no pawns of either color", "A file with only pawns", "The a-file", "A file your king is on"], "answer": 0, "why": "No pawns = a clear invasion highway for rooks and queens." },
+        { "q": "Why is the 7th rank so valuable for a rook?", "options": ["It attacks pawns sideways and imprisons the enemy king", "It's closer to promotion", "Rooks move faster there", "It defends your king"], "answer": 0, "why": "Most enemy pawns start on the 7th, and the king hides on the 8th — a rook there terrorizes both." }
+      ] },
+      { "type": "summary", "points": ["Rooks belong on open (or half-open) files", "Fight for control of the file — double rooks if needed", "A rook on the 7th rank is a monster", "Open files appear where pawns get traded — anticipate them"] }
+    ]
+  },
+  {
+    "id": "l4-piece-activity", "level": 4, "order": 4, "title": "Piece Activity & Weak Squares", "emoji": "⚡", "minutes": 6,
+    "steps": [
+      { "type": "explain", "title": "Active beats material", "text": ["Activity means your pieces control many squares and create threats. An active knight can be worth more than a lazy rook! Grandmasters happily give up material for activity.", "A WEAK SQUARE is a hole that enemy pawns can never attack — usually left behind by careless pawn pushes. Plant a knight in a weak square deep in enemy territory and it becomes an OUTPOST: a permanent monster."] },
+      { "type": "example", "title": "The eternal knight", "text": "The knight on d5 sits in a hole that Black's pawns can never attack (the c- and e-pawns are past it). Protected by a pawn and untouchable, it dominates the whole board.", "fen": "4k3/pp2pp2/8/3N4/2P5/8/PP3PPP/4K3 w - - 0 1", "highlights": { "d5": "good" } },
+      { "type": "quiz", "questions": [
+        { "q": "What makes a square 'weak' for your opponent?", "options": ["Their pawns can never attack it again", "It's dark-colored", "It's in the corner", "Their king is far from it"], "answer": 0, "why": "Once the neighboring pawns have passed by or disappeared, the hole is permanent." },
+        { "q": "Which piece most loves an outpost square?", "options": ["The knight", "The king", "The rook", "The h-pawn"], "answer": 0, "why": "A protected knight deep in enemy territory can't be chased by pawns and attacks everything around it." }
+      ] },
+      { "type": "summary", "points": ["Activity = squares controlled + threats created", "Careless pawn pushes create permanent weak squares", "Knights on protected outposts dominate", "When pieces sleep, wake them before starting an attack"] }
+    ]
+  },
+  {
+    "id": "l5-king-activity", "level": 5, "order": 1, "title": "The King Fights Back", "emoji": "🦁", "minutes": 6,
+    "steps": [
+      { "type": "explain", "title": "A new superpower", "text": ["All game long you hid your king. In the ENDGAME everything flips: with queens gone, the king becomes a fighting piece worth about 4 points — stronger than a knight or bishop!", "The rule: as soon as the heavy pieces leave the board, RUN your king to the center. In king-and-pawn endings, the more active king almost always wins."] },
+      { "type": "practice", "title": "Activate the king", "task": "The endgame has begun. March your king forward toward the center!", "fen": "8/5k2/8/8/8/8/4KP2/8 w - - 0 1", "accept": "exact", "correct": ["Ke3", "Kf3"], "success": "That's the spirit! In the endgame the king leads from the front — every step toward the center is a step toward victory.", "hint": "Move the king UP the board, toward the middle." },
+      { "type": "quiz", "questions": [
+        { "q": "When should your king become active?", "options": ["As soon as queens and most pieces are traded", "Never", "From move 1", "Only when losing"], "answer": 0, "why": "With mating danger gone, a passive king wastes your strongest remaining fighter." },
+        { "q": "Roughly how strong is an active endgame king?", "options": ["About 4 points — stronger than a knight or bishop", "1 point", "9 points", "It has no fighting value"], "answer": 0, "why": "The endgame king shepherds pawns, blockades passers, and wins races." }
+      ] },
+      { "type": "summary", "points": ["Endgame = king becomes a fighting piece", "Centralize the king the moment it's safe", "Active king beats passive king in pawn endings", "The king escorts pawns to promotion"] }
+    ]
+  },
+  {
+    "id": "l5-opposition", "level": 5, "order": 2, "title": "The Opposition", "emoji": "🤺", "minutes": 7,
+    "steps": [
+      { "type": "explain", "title": "The staring contest", "text": ["When two kings stand one square apart on the same line, they are IN OPPOSITION. Neither can advance — and whoever must move first has to give way. HAVING the opposition means it's your OPPONENT'S turn.", "This staring contest decides most king-and-pawn endgames: win the opposition, force their king aside, and escort your pawn home."] },
+      { "type": "practice", "title": "Take the opposition", "task": "Step your king directly in front of the enemy king — one square gap — so BLACK must give way first.", "fen": "8/4k3/8/8/4K3/4P3/8/8 w - - 0 1", "accept": "exact", "correct": ["Ke5"], "success": "You have the opposition! Now when Black's king steps aside, your king advances diagonally and the pawn strolls to promotion.", "hint": "Move straight forward so the kings face off with one empty square between them." },
+      { "type": "quiz", "questions": [
+        { "q": "You 'have the opposition' when the kings face off one square apart and…", "options": ["It's your OPPONENT'S turn to move", "It's your turn to move", "Your pawn is ahead", "You have more pawns"], "answer": 0, "why": "The player forced to move must step aside and let the other king through." },
+        { "q": "In king+pawn vs king, when is the win guaranteed (non-rook-pawn)?", "options": ["Your king reaches the 6th rank in front of its pawn", "The pawn reaches the 5th rank", "You have the opposition once", "It's never guaranteed"], "answer": 0, "why": "King on the 6th in front of the pawn wins no matter whose move — the golden rule of pawn endings." }
+      ] },
+      { "type": "summary", "points": ["Opposition: kings one square apart, opponent to move", "Whoever must move gives way", "King ahead of the pawn + opposition = win", "King on the 6th in front of the pawn always wins"] }
+    ]
+  },
+  {
+    "id": "l5-pawn-endings", "level": 5, "order": 3, "title": "Pawn Endings & the Square Rule", "emoji": "🏃", "minutes": 6,
+    "steps": [
+      { "type": "explain", "title": "The race and the square", "text": ["Can the defending king catch a runaway passed pawn? Don't count moves one by one — use the SQUARE RULE: draw an imaginary square from the pawn to its promotion rank. If the enemy king can step INSIDE the square, it catches the pawn.", "Remember the details: if the pawn hasn't moved yet, its double-step shrinks the chase by a move. And your own king can shoulder the enemy king out of the square!"] },
+      { "type": "example", "title": "Inside or outside?", "text": "The pawn's square runs from a4 up to a8 and across to e8-e4. Black's king on f4 is OUTSIDE the square with White to move — the pawn promotes untouched!", "fen": "8/8/8/8/P4k2/8/8/K7 w - - 0 1", "highlights": { "a4": "hint", "e8": "hint", "a8": "hint", "e4": "hint", "f4": "bad" } },
+      { "type": "quiz", "questions": [
+        { "q": "The square rule tells you instantly whether…", "options": ["The defending king can catch a passed pawn", "A pawn is weak", "To trade queens", "The game is drawn"], "answer": 0, "why": "King inside the square = pawn caught. Outside = new queen. No counting needed." },
+        { "q": "Which pawn is the trickiest to promote even with king help?", "options": ["The rook pawn (a- or h-file)", "The e-pawn", "The d-pawn", "They're all equal"], "answer": 0, "why": "The corner is cramped: many rook-pawn endings are drawn by stalemate tricks even a queen can't fix." }
+      ] },
+      { "type": "summary", "points": ["Square rule: king inside the square catches the pawn", "Unmoved pawns get a two-square head start", "Rook pawns are drawish — be careful trading into them", "Passed pawns must be pushed (or blockaded!)"] }
+    ]
+  },
+  {
+    "id": "l5-rook-endings", "level": 5, "order": 4, "title": "Rook Endgames: Lucena & Philidor", "emoji": "🌉", "minutes": 7,
+    "steps": [
+      { "type": "explain", "title": "The two positions every player must know", "text": ["Rook endgames are the most common endgames in chess. Two named positions decide them: LUCENA (the winning method) and PHILIDOR (the drawing method).", "LUCENA: your pawn on the 7th, king in front of it — win by 'building a bridge': rook to the 4th rank, march the king out, and block the checks with the rook. PHILIDOR: defending down a pawn — park your rook on your 3rd rank so their king can't advance; the moment the pawn pushes, check from behind forever."] },
+      { "type": "example", "title": "Building the bridge", "text": "The Lucena position. White's plan: Rc4!, then bring the king out via c7-b6; when the checks rain down, the rook on the 4th rank steps in as an umbrella — the bridge.", "fen": "1K6/1P3k2/8/8/8/8/r7/2R5 w - - 0 1", "arrows": [["c1", "c4"]] },
+      { "type": "quiz", "questions": [
+        { "q": "What is 'building a bridge' in the Lucena position?", "options": ["Using the rook on the 4th rank to shield the king from checks", "Trading rooks", "Promoting to a rook", "Advancing all pawns"], "answer": 0, "why": "Rc4 prepares to block the endless rook checks so the king can finally escape the pawn's path." },
+        { "q": "In the Philidor defense, where does your rook belong BEFORE the pawn advances?", "options": ["On your third rank, fencing out their king", "Behind your king", "In the corner", "Next to their rook"], "answer": 0, "why": "The third-rank fence stops the king from invading; once the pawn pushes, switch to eternal checks from behind." }
+      ] },
+      { "type": "summary", "points": ["Rook endings are the most common endings — master these two", "Lucena = winning: build the bridge with Rc4", "Philidor = drawing: rook on the 3rd rank, then check from behind", "Rooks belong BEHIND passed pawns — yours and theirs"] }
+    ]
+  }
+]

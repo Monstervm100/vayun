@@ -1,0 +1,25 @@
+# Dependencies & builds
+node_modules/
+.next/
+out/
+
+# Local data (analytics, databases) — never commit
+chessmaster-academy/frontend/.data/
+chessmaster-academy/backend/chessmaster.db
+chessmaster-academy/backend/test_chessmaster.db
+
+# Python
+chessmaster-academy/backend/.venv/
+__pycache__/
+*.pyc
+
+# Env & secrets
+.env
+.env.local
+.env*.local
+
+# Misc
+.DS_Store
+*.log
+.claude/
+

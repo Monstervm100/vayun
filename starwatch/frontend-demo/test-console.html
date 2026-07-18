@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>STARWATCH — Test Console</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=5">
+</head>
+<body>
+
+<div class="app">
+  <div class="topbar">
+    <div style="display:flex; align-items:center;">
+      <div class="brand head-font"><div class="mark"></div> STARWATCH</div>
+      <div class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="test-console.html" class="active">Test console</a>
+        <a href="real-world.html">Real attacks &amp; defenses</a>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <button class="primary" id="btnRunAll">Run all runnable tests</button>
+    </div>
+  </div>
+
+  <div class="card" style="border-radius:0 0 12px 12px; border-top:none;">
+    <div class="intro" style="border:none; border-bottom:1px solid var(--border);">
+      <div class="intro-what">
+        <h3 class="head-font">🧪 What is this page?</h3>
+        <p>
+          This page <b>proves the dashboard isn't faking it.</b> Each card below is an automatic
+          test: it feeds the detection engine a known input and checks that the output is exactly
+          what the project's requirements say it should be. Press <b>"Run all runnable tests"</b>
+          (top right) or run cards one at a time, and watch them turn green (pass) or red (fail).
+        </p>
+      </div>
+      <div class="intro-how">
+        <h3 class="head-font">Two kinds of tests</h3>
+        <p style="line-height:1.8;">
+          <b>Positive tests</b> — "when an attack happens, does STARWATCH catch it?"<br>
+          <b>Negative tests</b> — "when given garbage input or a broken server, does it fail
+          gracefully instead of crashing?"
+        </p>
+      </div>
+    </div>
+
+    <div class="summary-bar" id="summaryText"></div>
+
+    <div class="section-header">Positive test cases — does it catch real attacks?</div>
+    <div class="section-sub">Each test verifies one required behavior. The code like "FR2.1" links the test to the exact requirement in STARWATCH_SRD.md §4.</div>
+    <div class="tc-list" id="positiveList"></div>
+
+    <div class="section-header">Negative test cases — does it handle bad input without crashing?</div>
+    <div class="section-sub">Invalid requests, server failures, and edge cases — the situations most likely to embarrass a live demo if untested.</div>
+    <div class="tc-list" id="negativeList" style="padding-bottom:26px;"></div>
+  </div>
+</div>
+
+<script src="js/mockData.js?v=5"></script>
+<script src="js/demoData.js?v=5"></script>
+<script src="js/rules.js?v=5"></script>
+<script src="js/riskEngine.js?v=5"></script>
+<script src="js/simulator.js?v=5"></script>
+<script src="js/explainer.js?v=5"></script>
+<script src="js/mockApi.js?v=5"></script>
+<script src="js/testConsole.js?v=5"></script>
+</body>
+</html>

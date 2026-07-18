@@ -1,0 +1,17 @@
+# Generated data & trained models
+datasets/*.csv
+*.joblib
+*.sqlite
+*.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Editors & OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
