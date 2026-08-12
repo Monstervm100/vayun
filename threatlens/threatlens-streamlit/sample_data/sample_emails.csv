@@ -1,0 +1,7 @@
+id,source,collected_at,sender,subject,body,url,label
+7201,sample-set,2026-06-28,it-support@secure-mail-verify.co,Your account will be suspended within 24 hours,Verify your account now to avoid suspension. Click the link and confirm your password.,http://sec-login.co/verify?id=8821,Credential Theft
+7202,sample-set,2026-06-27,billing@invoice-portal-pay.com,Outstanding invoice #4471 payment required,Please review the attached invoice and process payment immediately to avoid penalty.,http://invoice-portal-pay.com/pay,Financial Scam
+7203,sample-set,2026-06-26,ceo@corp-exec-mail.net,Urgent request - are you available?,I need you to process a wire transfer discreetly. Reply asap.,,Business Email Compromise
+7204,sample-set,2026-06-25,it-support@secure-mail-verify.co,Account suspended within 24 hours,Your Microsoft 365 account is locked. Sign in to restore access immediately.,http://sec-login.co/verify?id=9007,Credential Theft
+7205,sample-set,2026-06-24,rewards@prize-claim-now.info,Congratulations! You have won a reward,Claim your reward now before it expires. Limited time only.,http://prize-claim-now.info/claim,Financial Scam
+7206,sample-set,2026-06-23,noreply@login-account.info,Unusual sign-in activity detected,We detected a new sign-in. Verify it was you by confirming your credentials.,http://login-account.info/confirm,Fake Login Page

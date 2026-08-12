@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>STARWATCH — Real Attacks &amp; Defenses</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=5">
+</head>
+<body>
+
+<div class="app">
+  <div class="topbar">
+    <div style="display:flex; align-items:center;">
+      <div class="brand head-font"><div class="mark"></div> STARWATCH</div>
+      <div class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="test-console.html">Test console</a>
+        <a href="real-world.html" class="active">Real attacks &amp; defenses</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="rw-body">
+
+    <div class="rw-section">
+      <h3>🌍 This isn't science fiction — satellite hacking really happens</h3>
+      <p class="sub">
+        Every attack you can simulate on the STARWATCH dashboard is based on things that have
+        genuinely happened to real satellites. Below are documented incidents from public
+        reporting, each summarized <b>in our own words</b> with a link to the original source
+        so you can read the full story. Where an incident matches one of our simulator
+        buttons, we tell you which one — so you can recreate a piece of history yourself.
+      </p>
+    </div>
+
+    <div class="rw-section">
+      <h3>Documented incidents</h3>
+      <p class="sub">Ordered oldest to newest. Click any source to read the original public reporting.</p>
+
+      <div class="incident">
+        <div class="yr">2007–2008 · UNITED STATES</div>
+        <h5>Hackers got within one step of commanding a NASA satellite</h5>
+        <p>
+          A U.S. government report to Congress described interference with two
+          NASA-managed Earth-observation satellites, Landsat-7 and Terra, through a
+          commercial ground station in Norway. For Terra, the report said the intruders
+          "achieved all steps required to command the satellite" — they had their finger on
+          the button — but never actually sent a command.
+        </p>
+        <span class="try">Simulate it on the Dashboard → 🚨 Hacker sends a fake command</span>
+        <div class="src">Source: U.S.–China Economic and Security Review Commission, 2011 Annual Report to Congress —
+          <a href="https://www.uscc.gov/annual-report/2011-annual-report-congress" target="_blank" rel="noopener">uscc.gov</a></div>
+      </div>
+
+      <div class="incident">
+        <div class="yr">2014 · UNITED STATES</div>
+        <h5>NOAA's weather-satellite data network breached</h5>
+        <p>
+          Attackers broke into the computer network that distributes data from NOAA's
+          weather satellites — the data behind everyday weather forecasts. NOAA had to take
+          services offline for days while it cleaned up, briefly cutting off satellite data
+          feeds used by forecasters worldwide.
+        </p>
+        <span class="try">Related demo idea → toggle "What if the server crashes?" and watch STARWATCH keep working</span>
+        <div class="src">Source: The Washington Post, "Chinese hack U.S. weather systems, satellite network" (Nov 2014) —
+          <a href="https://www.washingtonpost.com/local/chinese-hack-us-weather-systems-satellite-network/2014/11/12/bef1206a-68e9-11e4-b053-65cea7903f2e_story.html" target="_blank" rel="noopener">washingtonpost.com</a></div>
+      </div>
+
+      <div class="incident">
+        <div class="yr">2015 · GLOBAL</div>
+        <h5>Spies hijacked satellite internet links to hide their tracks</h5>
+        <p>
+          Security researchers discovered that an espionage group called Turla was hijacking
+          unencrypted commercial satellite internet downlinks. Because the satellite beams
+          data over a huge area, the spies could quietly "borrow" other users' connections,
+          making their command-and-control traffic almost impossible to trace.
+        </p>
+        <span class="try">Simulate the idea → messages from an UNKNOWN source is exactly what STARWATCH flags</span>
+        <div class="src">Source: Kaspersky Securelist, "Satellite Turla: APT Command and Control in the Sky" —
+          <a href="https://securelist.com/satellite-turla-apt-command-and-control-in-the-sky/72081/" target="_blank" rel="noopener">securelist.com</a></div>
+      </div>
+
+      <div class="incident">
+        <div class="yr">FEB 2022 · EUROPE</div>
+        <h5>The Viasat KA-SAT attack — the biggest satellite cyberattack so far</h5>
+        <p>
+          One hour before Russia's invasion of Ukraine began, a destructive program later
+          named "AcidRain" wiped tens of thousands of satellite-internet modems across
+          Europe. Ukrainian military communications were disrupted, and even 5,800 wind
+          turbines in Germany lost remote monitoring. The attackers didn't touch the
+          satellite itself — they got in through a misconfigured VPN in the
+          <b>ground network</b>, which is exactly the layer STARWATCH watches.
+        </p>
+        <span class="try">The lesson → the ground segment is the weakest link; monitoring every message matters</span>
+        <div class="src">Sources: Viasat official incident overview —
+          <a href="https://news.viasat.com/blog/corporate/ka-sat-network-cyber-attack-overview" target="_blank" rel="noopener">news.viasat.com</a> ·
+          CISA joint advisory AA22-076A —
+          <a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-076a" target="_blank" rel="noopener">cisa.gov</a></div>
+      </div>
+
+      <div class="incident">
+        <div class="yr">ONGOING · WORLDWIDE</div>
+        <h5>GPS jamming and spoofing, happening right now</h5>
+        <p>
+          GPS is a satellite service too, and near conflict zones thousands of aircraft
+          receive jammed or deliberately faked GPS signals every day. Researchers have
+          documented ships appearing to "teleport" to airports they never visited. This is
+          the real-world version of flooding or overpowering legitimate satellite signals —
+          and you can watch it happen on a live public map (link in the box below).
+        </p>
+        <span class="try">Simulate it on the Dashboard → 📡 Message flood (frequency spike)</span>
+        <div class="src">Source: C4ADS report "Above Us Only Stars: Exposing GPS Spoofing in Russia and Syria" —
+          <a href="https://c4ads.org/reports/above-us-only-stars/" target="_blank" rel="noopener">c4ads.org</a></div>
+      </div>
+
+      <div class="incident">
+        <div class="yr">2023 · UNITED STATES</div>
+        <h5>Moonlighter — the satellite launched to be hacked</h5>
+        <p>
+          The U.S. government launched a small satellite named Moonlighter specifically so
+          security researchers could legally attack it during the "Hack-A-Sat" competition at
+          the DEF CON hacking conference. When an industry launches a spacecraft just for
+          hacking practice, you know satellite cybersecurity is a serious field — the same
+          field STARWATCH lets you explore safely in a browser.
+        </p>
+        <span class="try">That's this whole project → a safe, simulated satellite to practice defending</span>
+        <div class="src">Sources: Hack-A-Sat competition —
+          <a href="https://hackasat.com/" target="_blank" rel="noopener">hackasat.com</a> ·
+          The Aerospace Corporation, Moonlighter —
+          <a href="https://aerospace.org/article/moonlighter-space-cybersecurity-test-bed" target="_blank" rel="noopener">aerospace.org</a></div>
+      </div>
+    </div>
+
+    <div class="rw-section">
+      <h3>📡 See it live today</h3>
+      <p class="sub">These public resources track real satellite-related security activity as it happens.</p>
+      <div class="live-links">
+        <a href="https://gpsjam.org" target="_blank" rel="noopener">
+          <div class="ln">gpsjam.org</div>
+          <div class="ld2">A daily-updated world map of GPS interference, built from public aircraft data. See where satellite signals are being jammed right now.</div>
+        </a>
+        <a href="https://www.cisa.gov/news-events/cybersecurity-advisories" target="_blank" rel="noopener">
+          <div class="ln">CISA advisories</div>
+          <div class="ld2">Official U.S. government cyber-threat advisories — search "satellite" or "SATCOM" for space-related alerts.</div>
+        </a>
+        <a href="https://s-isac.org/" target="_blank" rel="noopener">
+          <div class="ln">Space ISAC</div>
+          <div class="ld2">The space industry's threat-sharing center, where satellite operators exchange information about real attacks.</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="rw-section">
+      <h3>🛡️ How these hacks are prevented</h3>
+      <p class="sub">
+        Each card pairs a threat you can simulate on the dashboard with the real-world
+        defenses satellite operators use — and shows the part STARWATCH plays: <b>defenses
+        try to stop attacks; monitoring (STARWATCH's job) catches whatever gets through.</b>
+      </p>
+      <div class="def-grid">
+        <div class="def-card">
+          <div class="threat">Threat: fake commands</div>
+          <h5>Sign and encrypt every command</h5>
+          <p>Real satellites use cryptographic authentication (e.g. the CCSDS Space Data Link
+            Security standard) so the satellite can verify each command really came from
+            mission control — like a tamper-proof signature. Unsigned or wrongly-signed
+            commands are simply rejected.</p>
+          <span class="sw">STARWATCH's role: flags repeated authentication failures</span>
+        </div>
+        <div class="def-card">
+          <div class="threat">Threat: unknown senders</div>
+          <h5>Only talk to trusted ground stations</h5>
+          <p>Operators keep an allowlist of exactly which ground stations may contact each
+            satellite, and score how much each source is trusted. Anything from an
+            unrecognized transmitter is treated as hostile until proven otherwise
+            ("zero trust").</p>
+          <span class="sw">STARWATCH's role: flags messages from UNKNOWN sources</span>
+        </div>
+        <div class="def-card">
+          <div class="threat">Threat: message floods &amp; jamming</div>
+          <h5>Rate limits, frequency hopping, backup paths</h5>
+          <p>Satellites cap how many commands they accept per hour, can hop between radio
+            frequencies to dodge jamming, and have multiple ground stations so one blocked
+            path doesn't mean losing the spacecraft.</p>
+          <span class="sw">STARWATCH's role: flags abnormal command frequency</span>
+        </div>
+        <div class="def-card">
+          <div class="threat">Threat: ground-network break-ins</div>
+          <h5>Harden the ground segment (the Viasat lesson)</h5>
+          <p>The 2022 Viasat attack came through a misconfigured VPN on the ground. Defenses:
+            keep software patched, require strong multi-factor login, and segment networks so
+            breaking into one office PC never reaches satellite control.</p>
+          <span class="sw">STARWATCH's role: watches the ground-to-satellite boundary</span>
+        </div>
+        <div class="def-card">
+          <div class="threat">Threat: brand-new, unknown attacks</div>
+          <h5>AI anomaly detection + 24/7 monitoring</h5>
+          <p>Rules only catch attacks you predicted. Machine-learning models (like the
+            Isolation Forest in this project) learn what "normal" looks like and raise the
+            alarm on anything weird — even attacks nobody has seen before.</p>
+          <span class="sw">STARWATCH's role: this IS STARWATCH — its core purpose</span>
+        </div>
+        <div class="def-card">
+          <div class="threat">When prevention fails anyway</div>
+          <h5>Plan for the worst: respond and recover</h5>
+          <p>Operators write incident-response plans in advance: how to cut off a compromised
+            link, switch to backup systems, and keep essential services alive. Notice how
+            this dashboard falls back to saved data instead of a blank screen when its
+            server "dies" — same philosophy, tiny scale.</p>
+          <span class="sw">STARWATCH's role: demo the fallback with "What if the server crashes?"</span>
+        </div>
+      </div>
+      <p class="sub" style="margin-top:14px;">
+        Want the professional version of this advice? Read NIST IR 8270,
+        <i>Introduction to Cybersecurity for Commercial Satellite Operations</i> —
+        <a href="https://csrc.nist.gov/pubs/ir/8270/final" target="_blank" rel="noopener" style="color:var(--accent);">csrc.nist.gov</a>
+      </p>
+    </div>
+
+    <div class="rw-section" style="margin-bottom:0;">
+      <div class="note-box">
+        <b>About sources &amp; copyright:</b> the summaries on this page are written in our own
+        words for educational purposes; no article text is copied. Full credit for the
+        original reporting and research belongs to the linked publishers — U.S.–China
+        Economic and Security Review Commission, The Washington Post, Kaspersky Securelist,
+        Viasat, CISA, C4ADS, The Aerospace Corporation, and NIST. External links open the
+        original public sources. STARWATCH is a student research simulation and is not
+        affiliated with any of these organizations, NASA, or any real satellite operator.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

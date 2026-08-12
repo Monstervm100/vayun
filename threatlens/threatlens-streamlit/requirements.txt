@@ -1,0 +1,20 @@
+# ThreatLens — Version 1 (Phishing Intelligence Platform)
+# All dependencies are free and open-source.
+
+# --- UI / app (needed to run the dashboard) ---
+streamlit>=1.49
+pandas>=2.0
+
+# --- Machine Learning Engine (ML-FR-*) ---
+scikit-learn>=1.4
+xgboost>=2.0
+
+# --- Explainable AI Module (XAI-FR-*) ---
+shap>=0.45
+lime>=0.2
+
+# --- Charts (optional; UI falls back to native Streamlit charts) ---
+plotly>=5.20
+
+# --- Feature extraction helpers ---
+tldextract>=5.1

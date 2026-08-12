@@ -1,0 +1,12 @@
+# ThreatLens theme — SOC/threat-intel console (teal accent, cool neutrals)
+[theme]
+primaryColor = "#0e7c86"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#eaeef0"
+textColor = "#0f181c"
+font = "sans serif"
+
+[server]
+# Keep uploaded/malicious samples on the local machine.
+maxUploadSize = 20
+headless = true

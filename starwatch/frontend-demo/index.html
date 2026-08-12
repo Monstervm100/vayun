@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>STARWATCH — Mission Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=5">
+</head>
+<body>
+
+<div class="app">
+  <div class="topbar">
+    <div style="display:flex; align-items:center;">
+      <div class="brand head-font"><div class="mark"></div> STARWATCH</div>
+      <div class="nav-links">
+        <a href="index.html" class="active">Dashboard</a>
+        <a href="test-console.html">Test console</a>
+        <a href="real-world.html">Real attacks &amp; defenses</a>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <span class="session-note" id="sessionNote" title="Your events are saved in this browser only — nothing is uploaded anywhere. Come back tomorrow and the dashboard resumes where you left off."></span>
+      <span class="pill" id="uplinkPill" title="Shows whether the dashboard can reach its data server. Everything here is simulated — no real satellites.">Connected to satellites (simulated)</span>
+    </div>
+  </div>
+
+  <div class="banner" id="banner"></div>
+
+  <!-- Plain-English intro: explains what this site is and how to use it -->
+  <div class="intro card-flat">
+    <div class="intro-what">
+      <h3 class="head-font">🛰️ What is STARWATCH?</h3>
+      <p>
+        Satellites are controlled by radio messages sent from Earth. A hacker who fakes
+        those messages could take over a satellite. <b>STARWATCH is a security guard for
+        satellites:</b> it watches every incoming message, spots suspicious ones, gives each
+        threat a danger score from 0&ndash;100, and uses AI to explain the problem in plain
+        English. Everything here is a <b>simulation</b> — no real satellites involved, but
+        the attacks are modeled on real incidents: see
+        <a href="real-world.html" style="color:var(--accent);">Real attacks &amp; defenses</a>.
+      </p>
+    </div>
+    <div class="intro-how">
+      <h3 class="head-font">How to use this demo</h3>
+      <ol class="intro-steps">
+        <li><b>Pick a satellite</b> from the list on the left.</li>
+        <li><b>Pretend to be the hacker:</b> press one of the "Simulate an attack" buttons.</li>
+        <li><b>Watch STARWATCH catch it</b> — the danger gauge jumps and a red alert appears in the timeline.</li>
+        <li><b>Click the alert</b> to read the AI's explanation of what happened and what to do about it.</li>
+      </ol>
+      <p class="panel-help" style="margin-top:8px;">Your progress is saved automatically in this
+        browser — close the tab and come back tomorrow, and you'll resume right where you stopped.</p>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="rail">
+      <h4><span class="step-num">1</span> Satellites</h4>
+      <p class="panel-help">Three simulated satellites we are protecting. Click one to see its status.</p>
+      <div id="satelliteRail"></div>
+    </div>
+
+    <div class="main">
+      <div class="risk-row">
+        <div class="gauge-wrap" title="0 = everything normal · 100 = serious attack in progress">
+          <svg width="104" height="104" viewBox="0 0 104 104">
+            <circle cx="52" cy="52" r="44" fill="none" stroke="#E4E7EE" stroke-width="8"/>
+            <circle id="gaugeArc" cx="52" cy="52" r="44" fill="none" stroke-width="8"
+              stroke-linecap="round" transform="rotate(-90 52 52)"/>
+          </svg>
+          <div class="gauge-label">
+            <span class="num" id="gaugeNum">0</span>
+            <span class="lbl">Danger</span>
+          </div>
+        </div>
+        <div class="risk-meta">
+          <span class="sev" id="sevPill">LOW</span>
+          <h2 class="head-font" id="riskTitle">No active threats</h2>
+          <p id="riskDesc"></p>
+          <p class="panel-help">The danger score: 0 means all messages look normal, 100 means a serious attack. It rises when suspicious messages arrive.</p>
+        </div>
+      </div>
+
+      <div class="controls">
+        <h4><span class="step-num">2</span> Simulate an attack (you play the hacker)</h4>
+        <p class="panel-help">In real life these events would come from space. Here, you trigger them
+          with a button so you can watch STARWATCH react. Hover any button for details.</p>
+        <button class="primary" id="btnUnauth" title="A command arrives with a bad/missing security signature — like someone using a fake ID. This is the most serious attack.">🚨 Hacker sends a fake command</button>
+        <button id="btnFreq" title="Way too many messages arrive at once — often the start of an attack or a jamming attempt.">📡 Message flood (frequency spike)</button>
+        <button id="btnPattern" title="Messages start arriving in a weird, never-seen-before pattern — suspicious, but not proof of an attack.">📈 Unusual traffic pattern</button>
+        <button id="btnNormal" title="A perfectly normal, correctly-signed message — STARWATCH should stay calm and NOT raise an alert.">✅ Normal message (no attack)</button>
+        <button class="danger" id="btnInvalid" title="Sends a made-up scenario name the system doesn't know. A well-built system must reject it with an error instead of crashing — press it and check the activity log below.">🧪 Bad request (system should reject it)</button>
+        <button id="btnReset" title="Deletes your saved progress and starts the demo fresh.">↺ Restart demo</button>
+        <span class="toggle-row" title="Pretend the server died. The dashboard should keep working with saved demo data instead of showing a blank page."><input type="checkbox" id="toggleBackend"> What if the server crashes?</span>
+        <span class="toggle-row" title="Pretend the AI service is offline. Alerts should still get a (simpler) template explanation instead of none at all."><input type="checkbox" id="toggleLLM"> What if the AI is offline?</span>
+      </div>
+
+      <div class="timeline">
+        <h4><span class="step-num">3</span> What happened — event timeline</h4>
+        <p class="panel-help">Every message and every alert, newest at the bottom.
+          <span class="dot-legend"><i class="ld ok"></i>normal</span>
+          <span class="dot-legend"><i class="ld warn"></i>suspicious</span>
+          <span class="dot-legend"><i class="ld crit"></i>attack detected — click it!</span>
+        </p>
+        <div id="timelineList"></div>
+      </div>
+
+      <details class="log-wrap">
+        <summary>🔧 Behind the scenes: activity log (for the technically curious)</summary>
+        <p class="panel-help">Raw log of the requests the dashboard makes to the (simulated) server — the same API calls a real mission-control app would make.</p>
+        <div class="log" id="logPanel"></div>
+      </details>
+    </div>
+
+    <div class="drawer">
+      <h4><span class="step-num">4</span> AI explains the alert</h4>
+      <p class="panel-help">When STARWATCH raises an alert, an AI writes a plain-English incident report: what happened, the likely cause, and what the satellite operator should do next.</p>
+      <div id="drawerContent"></div>
+    </div>
+  </div>
+</div>
+
+<script src="js/mockData.js?v=5"></script>
+<script src="js/demoData.js?v=5"></script>
+<script src="js/rules.js?v=5"></script>
+<script src="js/riskEngine.js?v=5"></script>
+<script src="js/simulator.js?v=5"></script>
+<script src="js/explainer.js?v=5"></script>
+<script src="js/mockApi.js?v=5"></script>
+<script src="js/dashboard.js?v=5"></script>
+
+<!-- ===================================================================
+     VISITOR COUNTER (optional) — see README section "Tracking visitors".
+     1. Create a free account at https://www.goatcounter.com
+     2. Replace MYCODE below with the site code you chose there
+     3. Delete the two comment markers around the <script> tag to switch it on
+     GoatCounter sets no cookies and stores no personal data, so no consent
+     banner is needed. Add the same block to test-console.html and
+     real-world.html to count those pages too.
+==================================================================== -->
+<!--
+<script data-goatcounter="https://MYCODE.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+-->
+</body>
+</html>
